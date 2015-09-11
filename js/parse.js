@@ -1,11 +1,12 @@
 Parse.initialize("jYY9sPa7vefy9J3A1YxwVLfUTMRBVzIc9SefECZ7", "rrGAz3YXeI3Pijz2CmBum2gDIWpzUQDbsjpwvfSN");
 
-var submit = document.getElementById("submitEmail");
+document.getElementById("submitEmail").addEventListener("click", function(){
+submitEmail();
+})
 
-submit.addEventListener("click", function () {
-    function submitEmail() {
+function submitEmail() {
     var emailString = new Parse.Object("submitEmail");
-    emailString.set("email", document.getElementById("emailString").value);
+    emailString.set("email", document.getElementById("email").value);
     
     emailString.save({
         success: function (data) {
@@ -18,5 +19,3 @@ submit.addEventListener("click", function () {
     })
     
 }
-
-})
