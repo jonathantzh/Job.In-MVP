@@ -13,6 +13,8 @@
         </style>
         
     <title>Smart Social Recruiting | Airflink</title>
+    
+    <link rel="shortcut icon" href="img/favicon4.ico"/>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -87,13 +89,37 @@
 
 <div class="row">
   <div class="col-lg-12">
-    <div class="input-group" style="padding-top: 50px; padding-right:10px; margin-left: auto; margin-right: auto;">
+<!--    <div class="input-group" style="padding-top: 50px; padding-right:10px; margin-left: auto; margin-right: auto;">
       <input id = "email" type="text" class="form-control" placeholder="Join our SSR email list"
              style= "font-family: 'Arial'; text-align: center; vertical-align: middle; border-radius: 4px;">
         
         <p><br></p>
-        <button type="submit" class="btn btn-default" id="submitEmail">Submit</button>
+        <button type="submit" class="btn btn-default" id="submitEmail">Submit</button>-->
 
+<!-- Button trigger modal -->
+<p><br></p>
+<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+  Sign Up
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
@@ -131,32 +157,55 @@
     <br>
     
         <div class="row" style= "font-family: 'Vegur'; text-align: center;">
-            <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/community.png" alt="">
-                <p>Building a talent community</p>
-            </div>
-            
-            <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/communication.jpg" alt="">
-                <p>Facilitating communication within community</p>
-            </div>
-            
-            <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/recruit.png" alt="">
-                <p>Leveraging on communication to recruit</p>
-            </div>
+            <div class="row carousel-holder">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="img/sslawlogo.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/vaultlogo.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/smsdomelogo.png" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
         </div>
     <hr>
         
-    <div class="container">
+    <div class="container" style= "text-align: center;">
         <!-- Footer -->
-        <footer>
+            <h1 style= "font-family: 'Vegur'; text-align: center;">Join the SSR phenomenon today</h1>
+            <br>
+                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                  Sign Up
+                </button>
+
+            <hr>
             <div class="row">
                 <div class="col-lg-12">
                     <p style= "font-family: 'Vegur'; text-align: center;">Copyright &copy; <span style="color:#ff4848; font-weight: 400;">air</span>flink 2015</p>
                 </div>
             </div>
-        </footer>
     </div>
     <!-- /.container -->
 
