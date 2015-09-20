@@ -98,20 +98,142 @@
 
 <!-- Button trigger modal -->
 <p><br></p>
-<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#registration">
   Sign Up
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Registration</h3>
       </div>
       <div class="modal-body">
-        ...
+        
+        
+        <!-- Registration form - START -->
+<div class="container" style= "font-family: 'Vegur'; color: #000;">
+    <div class="row">
+        <form role="form">
+            <div class="col-lg-6">
+                <!--<div style = "text-align: left; font-size: 18px;"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
+                <div class="form-group">
+                    <label for="InputName">First Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputName">Last Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                                
+                <div class="form-group">
+                    <label for="InputEmail">Enter Email</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Email" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Confirm Email</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Confirm Email" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <!--<div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>                
+                <div class="form-group">Your Profile Picture: <input type="file" name="pic" id="pic"><br>
+                </div>
+                
+                <div class="form-group">
+                    <label>Total Experience</label>
+                    <div class = "row">
+                        <div class = "col-lg-6">
+                            <select class="form-control">
+                                <option>Years</option>
+                                <option>0</option>                                
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10 or more</option>                                   
+                            </select>
+                        </div>
+                        <div class = "col-lg-6">
+                            <select class="form-control">
+                                <option>Months</option>
+                                <option>0</option>                                
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>                                
+                            </select>
+                        </div>                        
+                    </div>
+
+                </div>-->
+                
+                <div class="form-group">
+                    <label for="InputName">School/Organisation</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter School or Organisation" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>                
+                
+                <div class="form-group">
+                    <label for="InputName">Field of Study/Work</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Field of Study or Work" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="InputName">Brief Description of Ideal Work Environment</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Tell us more about your ideal workplace" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                    <p>By signing up you agree to the Terms & Conditions stated in our <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
+                
+                <!--<div class="form-group">Have a resume? Upload it here:<br>
+                <input type="file" name="pic" id="pic">
+                <span>Upload PDF file no larger than 200kb</span>
+                </div>      -->          
+            </div>
+        </form>
+    </div>
+<br>
+</div>
+<!-- Registration form - END -->
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -196,7 +318,7 @@
         <!-- Footer -->
             <h1 style= "font-family: 'Vegur'; text-align: center;">Join the SSR phenomenon today</h1>
             <br>
-                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#registration">
                   Sign Up
                 </button>
 
