@@ -124,7 +124,7 @@
                 <div class="form-group">
                     <label for="InputName">First Name</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Name" required>
+                        <input type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Your First Name" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                 <div class="form-group">
                     <label for="InputName">Last Name</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputLname" placeholder="Enter Name" required>
+                        <input type="text" class="form-control" name="InputName" id="InputLname" placeholder="Enter Your Last Name" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
@@ -140,14 +140,14 @@
                 <div class="form-group">
                     <label for="InputEmail">Enter Email</label>
                     <div class="input-group">
-                        <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Email" required>
+                        <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Your Email" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="InputEmail">Confirm Email</label>
                     <div class="input-group">
-                        <input type="email" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Confirm Email" required>
+                        <input type="email" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Confirm Your Email" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                 <div class="form-group">
                     <label for="InputName">School/Organisation</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputSchool" placeholder="Enter School or Organisation" required>
+                        <input type="text" class="form-control" name="InputName" id="InputSchool" placeholder="Enter Your School or Organisation" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>                
@@ -210,7 +210,7 @@
                 <div class="form-group">
                     <label for="InputName">Field of Study/Work</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputStudy" placeholder="Enter Field of Study or Work" required>
+                        <input type="text" class="form-control" name="InputName" id="InputStudy" placeholder="Enter Your Field of Study or Work" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
@@ -229,6 +229,11 @@
                 <input type="file" name="pic" id="pic">
                 <span>Upload PDF file no larger than 200kb</span>
                 </div>      -->          
+                   
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
+                <input type="submit" name="submit" id="submitForm" value="Sign Up" class="btn btn-success">
+                </div>
             </div>
         </form>
     </div>
@@ -236,12 +241,8 @@
 </div>
 <!-- Registration form - END -->
         
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <input type="submit" name="submit" id="submitForm" value="Sign Up" class="btn btn-success">
-        <!--<button id="submitForm" type="button" class="btn btn-primary">Sign Up</button>-->
-      </div>
+        </div>
+     
     </div>
   </div>
 </div>

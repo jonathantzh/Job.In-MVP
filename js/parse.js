@@ -1,8 +1,24 @@
 Parse.initialize("jYY9sPa7vefy9J3A1YxwVLfUTMRBVzIc9SefECZ7", "rrGAz3YXeI3Pijz2CmBum2gDIWpzUQDbsjpwvfSN");
 
 document.getElementById("submitForm").addEventListener("click", function(){
-submitEmail();
-})
+    if (document.getElementById("InputFname").value && document.getElementById("InputLname").value
+        && document.getElementById("InputEmailFirst").value && document.getElementById("InputSchool").value
+        && document.getElementById("InputStudy").value && document.getElementById("InputEnv").value &&
+        (document.getElementById("InputEmailFirst").value == document.getElementById("InputEmailSecond").value)) {
+        submitEmail();
+        $("#closeForm").click();
+        document.getElementById("InputFname").value = '';
+        document.getElementById("InputLname").value = '';
+        document.getElementById("InputEmailFirst").value = '';
+        document.getElementById("InputSchool").value = '';
+        document.getElementById("InputStudy").value = '';
+        document.getElementById("InputEnv").value = '';
+        document.getElementById("InputEmailSecond").value = '';
+    }
+    else if (document.getElementById("InputEmailFirst").value != document.getElementById("InputEmailSecond").value) {
+        alert('Please check that you have entered the same email address.');
+    }
+    })
 
 function submitEmail() {
     var UserForm = new Parse.Object("UserForm");
