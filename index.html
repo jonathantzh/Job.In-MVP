@@ -124,7 +124,7 @@
                 <div class="form-group">
                     <label for="InputName">First Name</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                        <input type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Name" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                 <div class="form-group">
                     <label for="InputName">Last Name</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                        <input type="text" class="form-control" name="InputName" id="InputLname" placeholder="Enter Name" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                 <div class="form-group">
                     <label for="InputName">School/Organisation</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter School or Organisation" required>
+                        <input type="text" class="form-control" name="InputName" id="InputSchool" placeholder="Enter School or Organisation" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>                
@@ -210,7 +210,7 @@
                 <div class="form-group">
                     <label for="InputName">Field of Study/Work</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Field of Study or Work" required>
+                        <input type="text" class="form-control" name="InputName" id="InputStudy" placeholder="Enter Field of Study or Work" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
@@ -218,7 +218,7 @@
                 <div class="form-group">
                     <label for="InputName">Brief Description of Ideal Work Environment</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Tell us more about your ideal workplace" required>
+                        <input type="text" class="form-control" name="InputName" id="InputEnv" placeholder="Tell us more about your ideal workplace" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
@@ -239,7 +239,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Sign Up</button>
+        <input type="submit" name="submit" id="submitForm" value="Sign Up" class="btn btn-success">
+        <!--<button id="submitForm" type="button" class="btn btn-primary">Sign Up</button>-->
       </div>
     </div>
   </div>
@@ -264,14 +265,14 @@
                 
      <h1 style= "font-family: 'Vegur';">Key Offerings</h1>
     <br>
-            <div class="col-lg-3 " style= "font-family: 'Vegur';">
+            <div class="col-lg-3" style= "font-family: 'Vegur';">
                 <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/community1.png" alt="">
                 <br>
                 <h3 style="text-align: center;">Humanize</h3>
                 <p>Go beyond the standard job description. Build relationships with prospective employees to find that ideal candidate.</p>
             </div>
             
-           <div class="col-lg-3 ">
+           <div class="col-lg-3">
                 <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/communication.jpg" alt="">
                 <br>
                 <h3 style="text-align: center;">Engage</h3>
@@ -279,13 +280,13 @@
                 build connections.</p>
             </div>
             
-            <div class="col-lg-3 ">
+            <div class="col-lg-3">
                 <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/recruit.png" alt="">
                 <br>
                 <h3 style="text-align: center;">Listen</h3>
                 <p>Browse our database of online business cards, listen to what companies have to offer. Find your ideal company match.</p>
             </div>
-         <div class="col-lg-3 c">
+         <div class="col-lg-3">
                 <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/promote.png" alt="">
                 <br>
                 <h3 style="text-align: center;">Promote</h3>
@@ -351,7 +352,7 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
