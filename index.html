@@ -9,7 +9,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
         <style>
-        @font-face { font-family: Vegur; src: url('fonts/vegur.otf'); } 
+        
+            @font-face {
+                font-family: 'Vegur';
+                src: url('fonts/vegur-webfont.eot');
+                src: url('fonts/vegur-webfont.eot?#iefix') format('embedded-opentype'),
+                     url('fonts/vegur-webfont.woff2') format('woff2'),
+                     url('fonts/vegur-webfont.woff') format('woff'),
+                     url('fonts/vegur-webfont.ttf') format('truetype'),
+                     url('fonts/vegur-webfont.svg#vegurextralight') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            
+            }
         </style>
         
     <title>Smart Social Recruiting | Airflink</title>
@@ -119,13 +131,13 @@
 <div class="container" style= "font-family: 'Vegur'; color: #000;">
     <div class="row">
         <form role="form">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6">
                 <!--<div style = "text-align: left; font-size: 18px;"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
                 <div class="form-group">
                     <label for="InputName">First Name</label>
                     <div class="input-group">
                         <input type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Your First Name" required>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>               
                     </div>
                 </div>
                 
@@ -254,7 +266,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </header>
 
     <!-- Main Content -->
