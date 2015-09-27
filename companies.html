@@ -24,7 +24,7 @@
             }
         </style>
         
-    <title>Our Clients | Airflink</title>
+    <title>Browse Companies | Airflink</title>
 
     <link rel="shortcut icon" href="img/favicon4.ico"/>
     
@@ -34,6 +34,7 @@
     <!-- Custom CSS -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
     <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -107,10 +108,8 @@
     </header>
 
     <!-- Post Content -->
-    <div class="container" style= "font-family: 'Vegur'; font-weight: 600;">
-
-        <div class="row" style= "font-family: 'Vegur'; text-align: center;">
-
+        <div class="row">
+          <h1 style= "font-family: 'Vegur'; text-align: center;">Featured Companies</h1>
             <!--<div class="col-md-3">
                 <p class="lead"><span style="color:#ff4848";>client</span> sketches</p>
                 <div class="list-group">
@@ -153,10 +152,44 @@
                     </div>
             </div>
         </div>
+        <hr>
 
-    </div>
+<!-- Projects Row -->
+        <h1 style= "font-family: 'Vegur'; text-align: center;">All Companies</h1>
+        <br>
+        <div class="row" style= "font-family: 'Vegur'; text-align: center; margin-left: auto; margin-right: auto;">
+            <div class="col-md-4 portfolio-item">
+     
+                    <img onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany" class="img-responsive" src="img/sslawlogo700x400.png" alt="">
+          
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany"  style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">Samuel Seow Law Corporation</a>
+                </h3>
+                <p style= "text-align: center;">Law | Est. 2005</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany" class="img-responsive" src="img/smsdomelogo700x400.png" alt="">
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">SMS Dome</a>
+                </h3>
+                <p style= "text-align: center;">Communications | Est. 2007</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img onmouseover="" style="cursor: pointer;" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany" class="img-responsive" src="img/vaultlogo700x400.png" alt="">
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">Vault Dragon</a>
+                </h3>
+                <p style= "text-align: center;">Logistics | Est. 2013</p>
+            </div>
+        </div>
+        <!-- /.row -->
 
-    
  <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -196,6 +229,32 @@
 
     </div>
     <!-- /.container -->
+
+<!-- Modal -->
+<div class="modal fade" id="selectedCompany" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Company Title</h3> <!--include innerHTML js-->
+      </div>
+      <div class="modal-body">
+
+<div class="container" style= "font-family: 'Vegur'; color: #000;">
+    <div class="row">
+        <form role="form">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <!--<div style = "text-align: left; font-size: 18px;"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
+                <div class="form-group">
+                    <label for="InputName">Company Video</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="InputName">Company Description</label>
+                </div>
+            </div>
+    </div>
+</div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

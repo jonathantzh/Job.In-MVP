@@ -1,8 +1,10 @@
 airflink website bugs:
 medium resizing causes right gap on modal
 ie text field focus causes bleeding line effect
+modal on fade in shifts navigation bar
 
 to-do list: 
+connectivity issues
 website encryption
 user login
 airflink email system
