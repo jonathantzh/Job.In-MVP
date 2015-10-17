@@ -91,16 +91,21 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+    <header class="intro-header" style="background-image: url('img/companies.png')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
                         <h1 style= "font-family: 'Vegur'; font-size: 110px;"><span style="color:#ff4848";></span>browse</h1>
                         <hr class="small">
-                        
                         <span class="subheading">man must explore, and this is exploration
-                        at its <span style="color:#ff4848; font-weight: 400;">greatest</span></span>
+                        at its <span style="color:#ff4848";>greatest</span></span>
+                        <br>
+                        <br>
+                        <br>       
+                        <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#companies">
+                            Tell us what companies you want to see next!
+                        </button>
                     </div>
                 </div>
             </div>
@@ -109,16 +114,9 @@
 
     <!-- Post Content -->
         <div class="row">
-          <h1 style= "font-family: 'Vegur'; text-align: center;">Featured Companies</h1>
-            <!--<div class="col-md-3">
-                <p class="lead"><span style="color:#ff4848";>client</span> sketches</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Law</a>
-                    <a href="#" class="list-group-item">Communications</a>
-                    <a href="#" class="list-group-item">Technology</a>
-                </div>
-            </div>-->
-
+        <h1 style= "font-weight: 500; font-size: 48px;text-align: center;"><span style= "color:#ff4848;">Featured</span> Companies</h1>
+        <br>
+        <br> 
             <div class="row carousel-holder">
                     <div class="col-md-2">
                     </div>
@@ -154,9 +152,12 @@
         </div>
         <hr>
 
-<!-- Projects Row -->
-        <h1 style= "font-family: 'Vegur'; text-align: center;">All Companies</h1>
+        
+<!-- Companies Row -->
         <br>
+        <h1 style= "font-weight: 500; font-size: 48px;text-align: center;"><span style= "color:#ff4848;">All</span> Companies</h1>
+        <br>
+        <br> 
         <div class="row" style= "font-family: 'Vegur'; text-align: center; margin-left: auto; margin-right: auto;">
             <div class="col-md-4 portfolio-item">
      
@@ -230,31 +231,58 @@
     </div>
     <!-- /.container -->
 
-<!-- Modal -->
-<div class="modal fade" id="selectedCompany" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Company Title</h3> <!--include innerHTML js-->
-      </div>
-      <div class="modal-body">
+ <!-- Modal Feedback-->
+        <div class="modal fade" id="companies" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Tell us what you want to see next!</h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <!--<div style = "text-align: left; font-size: 18px;"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
+                          <div class="form-group">
+                              <label for="InputName">Name</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Your Name" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>               
+                              </div>
+                          </div>
+                             
+                          <div class="form-group">
+                              <label for="InputEmail">Enter Email</label>
+                              <div class="input-group">
+                                  <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Your Email" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>             
+                          
+                          <div class="form-group">
+                              <label for="InputName">Feedback</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputName" id="InputStudy" placeholder="Tell us your feedback" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+                                                       
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
+                          <input type="submit" name="submit" id="submitForm" value="Submit" class="btn btn-danger">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+<!-- Modal Feedback form - END -->
 
-<div class="container" style= "font-family: 'Vegur'; color: #000;">
-    <div class="row">
-        <form role="form">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <!--<div style = "text-align: left; font-size: 18px;"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
-                <div class="form-group">
-                    <label for="InputName">Company Video</label>
-                </div>
-                
-                <div class="form-group">
-                    <label for="InputName">Company Description</label>
-                </div>
-            </div>
-    </div>
-</div>
+
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -264,6 +292,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
+    
+    <!-- Parse Server JavaScript -->
+    <script src="js/parse.js"></script>
 
 </body>
 

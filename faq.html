@@ -20,7 +20,6 @@
                      url('fonts/vegur-webfont.svg#vegurextralight') format('svg');
                 font-weight: normal;
                 font-style: normal;
-            
             }
         </style>
 
@@ -97,6 +96,12 @@
                         <h1 style= "font-family: 'Vegur'; font-size: 100px;">faq<span style="color:#ff4848";></span></h1>
                         <hr class="small">
                         <span class="subheading">frequently asked <span style="color:#ff4848; font-weight: 400;">questions</span></span>
+                        <br>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#feedback">
+                            Want to get in touch? Drop us a message!
+                        </button>
                     </div>
                 </div>
             </div>
@@ -153,6 +158,56 @@
             </div>
         </div>
     </footer>
+    
+<!-- Modal Feedback-->
+        <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">What would you like to tell us?</h3>
+              </div>
+              <div class="modal-body">
+ <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <!--<div style = "text-align: left; font-size: 18px;"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
+                          <div class="form-group">
+                              <label for="InputName">Name</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Your Name" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>               
+                              </div>
+                          </div>
+                             
+                          <div class="form-group">
+                              <label for="InputEmail">Enter Email</label>
+                              <div class="input-group">
+                                  <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Your Email" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>             
+                          
+                          <div class="form-group">
+                              <label for="InputName">Feedback</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputName" id="InputStudy" placeholder="Tell us your feedback" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+                                                       
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
+                          <input type="submit" name="submit" id="submitForm" value="Submit" class="btn btn-danger">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+<!-- Modal Feedback form - END -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
