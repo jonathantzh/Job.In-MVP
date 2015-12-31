@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+        <style>
+        @font-face {
+                font-family: 'Vegur';
+                src: url('fonts/vegur-webfont.eot');
+                src: url('fonts/vegur-webfont.eot?#iefix') format('embedded-opentype'),
+                     url('fonts/vegur-webfont.woff2') format('woff2'),
+                     url('fonts/vegur-webfont.woff') format('woff'),
+                     url('fonts/vegur-webfont.ttf') format('truetype'),
+                     url('fonts/vegur-webfont.svg#vegurextralight') format('svg');
+                font-weight: normal;
+                font-style: normal;
+
+            }
+        </style>
+
+    <title>Browse Companies | Airflink</title>
+
+    <link rel="shortcut icon" href="img/faviconred.ico"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+    <link href="css/searchbar.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="index.html">Start Bootstrap</a>-->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="companies.html">companies</span></a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="https://airflink.wordpress.com/" target="_blank">Resources</a>
+                    </li>
+                </ul>
+
+                 <ul class="nav navbar-nav navbar-right">
+                      <li>
+                    <input type="button" data-toggle="modal" data-target="#bizcard" style="text-align:center;" value="View Your Biz Card"
+                        class="btn btn-danger btn" id="viewBizCard">
+                    <input type="button" data-toggle="modal" data-target="#editprofile" style="text-align:center;" value="Edit Your Profile"
+                        class="btn btn-danger btn" id="editProfile">
+                    </li>
+                    <li>
+                    <button type="button" id="companylink" class="btn btn-danger btn-sm" style="text-align:center; font-size: 12px;">
+                            <a href="company_companies2.html">Are you a Company? Click Here!</a>
+                    </button>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/companies.jpg')">
+        <div class="container" style="text-align: center;">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1 style= "font-weight:300; font-size: 100px;"><span style="color:#ff4848";></span>browse</h1>
+                        <hr class="small">
+                        <span class="subheading">man must explore, and this is exploration
+                        at its greatest</span>
+                        <br>
+
+                        <!--searchbar-->
+            <div class="input-group" id="adv-search" style="font-family: Vegur;">
+                <input type="text" class="form-control" placeholder="Search for companies" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="searchbtn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                    <label for="filter">Filter by</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>All Companies</option>
+                                        <option value="1">Company Name</option>
+                                        <option value="2">Industry</option>
+                                        <option value="3">Most Viewed</option>
+                                        <option value="4">Most Commented</option>
+                                    </select>
+                                  </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <button type="button" class="searchbtn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+            </div>
+<!--searchbar end-->
+
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
+                            <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community"
+                                   class="btn btn-danger btn-lg" id="signUp">
+                             <input type="button" data-toggle="modal" data-target="#login" style="text-align:center;" value="Login here"
+                                   class="btn btn-danger btn-lg" id="logIn">
+                             <input type="button" style="text-align:center;" value="Logout" class="btn btn-danger btn-lg" id="logOut">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+        <div class="row">
+        <h1 style= "font-weight: 500; font-size: 48px;text-align: center;"><span style= "color:#ff4848;">Featured</span> Companies</h1>
+        <br>
+        <br>
+            <div class="row carousel-holder">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="img/smsdomelogo.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/vaultlogo.png" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+            </div>
+        </div>
+        <hr>
+
+        <br>
+        <h1 style= "font-weight: 500; font-size: 48px;text-align: center;"><span style= "color:#ff4848;">All</span> Companies</h1>
+        <br>
+        <br>
+
+        <!-- Companies Row -->
+
+        <div class="row" style= "font-family: 'Vegur'; text-align: center; margin-left: auto; margin-right: auto;">
+            <div class="col-md-4 portfolio-item">
+                      <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/pds.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;"
+                            id="">PDS International</a>
+                </h3>
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>PDS International specializes in the distribution, design, development and manufacture of innovative PPE (Personal Protective Equipment)
+                        products for both Asians and European counterparts.
+                        </p>
+                    </div>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                     <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/playnation.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany" data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">Playnation</a>
+                </h3>
+                <div class="row" style = "font-family: Vegur;">
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>Founded with the vision of creating a cosy and comfortable place for youngsters to play, bond and socialize, Playnation has grown to be a
+                        leading company with over 200 designer board and card games and more than 100 handpicked console game titles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-item">
+                     <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/rigel.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">Rigel Technology</a>
+                </h3>
+                <div class="row" style = "font-family: Vegur;">
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>Rigel forges ahead with eco-friendly bathroom solutions, helping to create a more sustainable future with
+                        efficient resource management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- /.row -->
+
+         <!-- Companies Row -->
+
+        <div class="row" style= "font-family: 'Vegur'; text-align: center; margin-left: auto; margin-right: auto;">
+            <div class="col-md-4 portfolio-item">
+                      <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/sunseap.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;"
+                            id="">Sunseap</a>
+                </h3>
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>One of the largest and most established in South East Asia Pacific, Sunseap has been in the sustainable energy business for
+                        over 3 decades, delivering bankable solar energy solutions.
+                        </p>
+                    </div>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                     <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/visenze.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany" data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">ViSenze</a>
+                </h3>
+                <div class="row" style = "font-family: Vegur;">
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>ViSenze is a Singapore-based startup providing visual search and visual image recognition for
+                        e-commerce and contextual advertising.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-item">
+                     <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/webnatics.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">Webnatics</a>
+                </h3>
+                <div class="row" style = "font-family: Vegur;">
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>The leading Google AdWords Premier SMB Partner, Webnatics help to ensure success and ROI for
+                        digital and search marketing campaigns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row" style= "font-family: 'Vegur'; text-align: center; margin-left: auto; margin-right: auto;">
+            <div class="col-md-4 portfolio-item">
+                      <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/ck.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #30a0ff;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;"
+                            id="ckvideo">Charles &amp; Keith</a>
+                </h3>
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>Founded by brothers Charles and Keith in 1996, Charles & Keith is a Singaporean fast fashion brand that draws inspiration
+                          from the runway to produce fashion forward footwear and accessories.
+                        </p>
+                    </div>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                     <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/goodrich.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #30a0ff;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany" data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">Goodrich Global</a>
+                </h3>
+                <div class="row" style = "font-family: Vegur;">
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>Established in 1983, the Goodrich Global brand has grown to become synonymous with trend-setting wallcoverings. It offers an
+                          extensive collection of interior wallcoverings, carpets, fabrics and floorings and boasts a strong presence throughout the
+                          region, with over 30 regional offices and Goodrich Galleries located throughout 7 countries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="companies.html">&laquo;</a>
+                    </li>
+                    <li>
+                        <a href="companies.html">1</a>
+                    </li>
+                   <li class="active">
+                        <a href="companies2.html">2</a>
+                    </li>
+                    <li>
+<!--                         <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+
+<!-- Modal Feedback-->
+        <div class="modal fade" id="companies" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Tell us which company you want to see next!</h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <!--<div style = "text-align: left; font-size: 18px;"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
+                          <div class="form-group">
+                              <label for="InputName">Name</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Your Name" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="InputEmail">Enter Email</label>
+                              <div class="input-group">
+                                  <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Your Email" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="InputName">Feedback</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputFeedback" id="InputFeedback" placeholder="Tell us your feedback" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
+                          <input type="submit" name="submit" id="submitForm" value="Submit" class="btn btn-danger">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+              </div>
+              </div>
+            </div>
+        </div>
+<!-- Modal Feedback form - END -->
+
+<!-- Modal Registration-->
+        <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Register
+<!--                    <button type="button" class="btn btn-default" aria-label="Left Align" id="prev">
+                         <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align" id="next">
+                         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    </button>-->
+                  </h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="form-group" id="fname">
+                              <label for="InputFName">Full Name</label>
+                              <div class="input-group">
+                                  <input style="width:100%" type="text" class="form-control" name="inputFullName" id="inputFullName" placeholder="Enter Your Full Name" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="InputPassword">Username</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Enter Your Username" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="InputPassword">Password</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Enter Your Password" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="InputCPassword">Confirm Password</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control" id="inputCPassword" name="inputCPassword" placeholder="Confirm Your Password" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                            </div>
+
+                          <div class="form-group">
+                              <label for="InputEmail">Email Address</label>
+                              <div class="input-group">
+                                  <input type="email" class="form-control" name="InputName" id="inputEmail" placeholder="Enter Your Email" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="InputAge">Age</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputAge" id="inputAge" placeholder="Enter Your Age" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="InputGender">Gender</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputGender" id="inputGender" placeholder="Enter Your Gender" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                             <div class="form-group">
+                              <label for="InputNationality">Nationality</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputNationality" id="inputNationality" placeholder="Enter Your Nationality" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                              <div class="form-group">
+                              <label for="InputSchool">School/Organization</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputName" id="inputSchool" placeholder="Enter Your School/Organization" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="InputContact">Contact Number</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputContact" id="inputContact" placeholder="Enter Your Contact Number" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="InputEducation">Degree/Education</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputEducation" id="inputEducation" placeholder="Enter Your Degree/Education" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="InputSkills">Skills</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputSkills" id="inputSkills" placeholder="e.g. Productivity Tools, Coding, etc" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="InputObj">Objective Statement</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputObj" id="inputObj" placeholder="e.g. Sociable, Passionate, Ambitious" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+                          <label>Submit a profile photo here: (Optional)</label>
+                          <input type="file" id="profilePhotoFileUpload">
+                          <br>
+                          <label>Submit your resume here: (Optional)</label>
+                          <input type="file" id="profileResumeUpload">
+
+                        <p><input type="checkbox" required="true"> I agree to the Terms & Conditions stated in Airflink's <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
+
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
+                          <input type="submit" name="submit" id="submitForm" value="Sign Up" class="btn btn-danger">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+          <!-- Modal Registration form - END -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+<!-- Modal Login-->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Login</h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="form-group">
+                              <label for="loginUsername">Username</label>
+                              <div class="input-group">
+                                  <input style="width:100%" type="text" class="form-control" name="InputName" id="loginUsername" placeholder="Enter Your Username" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="loginPassword">Password</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control" id="loginPassword" name="InputPassword" placeholder="Enter Your Password" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
+                          <input type="submit" name="submit" id="submitLogin" value="Login" class="btn btn-danger">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+          <!-- Modal Login form - END -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
+<!-- Modal Biz Card-->
+        <div class="modal fade" id="bizcard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="profileFullName" style= "font-family: 'Vegur'; color: #000; text-align: left;"></h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+
+                          <!--biz card content-->
+                          <img style="float: right; width: 150px; border-radius: 1px; border: solid;" id="profileImg">
+                          <!--<div id="profileFullName"></div>-->
+                          <div>Objective Statement</div>
+                          <label id="profileObj"></label>
+                          <div>Skills</div>
+                          <label id="profileSkills"></label>
+                          <div>Education</div>
+                          <label id="profileEducation"></label>
+                          <div>Email</div>
+                          <label id="profileEmail"></label>
+                          <div>Contact Number</div>
+                          <label id="profileContact"></label>
+                             <br>
+                          <div class="modal-footer">
+                            <button class="btn btn-danger" id="profileResume" style="float: right;">Click for Resume</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+          <!-- Modal Login form - END -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
+<!-- Modal Edit Profile-->
+        <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Edit Your Profile Here</h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="form-group">
+                              <label for="EditFName">Full Name</label>
+                              <div class="input-group">
+                                  <input style="width:100%" type="text" class="form-control" name="editFullName" id="editFullName">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="EditPassword">Username</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" id="editUsername" name="editUsername">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="EditPassword">Password</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control" id="editPassword" name="editPassword" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="EditEmail">Email Address</label>
+                              <div class="input-group">
+                                  <input type="email" class="form-control" name="editName" id="editEmail">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="EditAge">Age</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditAge" id="editAge">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="EditGender">Gender</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditGender" id="editGender">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                             <div class="form-group">
+                              <label for="EditNationality">Nationality</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditNationality" id="editNationality">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                              <div class="form-group">
+                              <label for="EditSchool">School/Organisation</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditName" id="editSchool">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="EditContact">Contact Number</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditContact" id="editContact">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="EditEducation">Degree/Education</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditEducation" id="editEducation">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="EditSkills">Skills</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditSkills" id="editSkills">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="EditObj">Objective Statement</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditObj" id="editObj">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+                          <label>Upload a new Business Card Photo</label>
+                          <input type="file" id="editProfilePhotoFileUpload">
+                          <br>
+                          <label>Upload a new Resume</label>
+                          <input type="file" id="editProfileResumeUpload">
+
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm3">Close</button>
+                          <input type="submit" name="submit" id="submitEdit" value="Edit Profile" class="btn btn-danger">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+          <!-- Modal Registration form - END -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="smsdome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome</h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Company Description - START -->
+                <img style= "width: 100%;" src="img/smsdomelogo.png" alt="smsdomelogo"></img>
+                <img class="btn" data-toggle="modal" data-target="#companies" alt="applications" src="img/applyvideo.png"></img>
+                    <h3 style="font-family: Vegur;">Communications  |  Est. 2013</h3>
+                    <p>
+                        SmsDome was founded in 2013.
+
+                    </p>
+              </div>
+              </div>
+            </div>
+        </div>
+<!-- Modal SmsDome - END -->
+
+    <div class="container">
+
+        <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <p style= "font-family: 'Vegur';text-align: center; font-weight: bolder;">Copyright &copy; <span style="color:#ff4848; font-weight: 400;">
+            air</span>flink 2015<br><br><a href="https://www.facebook.com/airflink?ref=hl" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
+            <a href="https://airflink.wordpress.com/" target="_blank"><i class="fa fa-wordpress fa-fw"></i></a></p>
+        </div>
+    </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+    <!-- Parse Server JavaScript -->
+    <script src="js/parse-user-index.js"></script>
+
+
+</body>
+
+</html>

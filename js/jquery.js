@@ -11,6 +11,11 @@
  *
  * Date: 2014-05-01T17:11Z
  */
+$('#navigation').click(function(e) {
+     // do something fancy
+     return false; // prevent default click action from happening!
+     e.preventDefault(); // same thing as above
+});
 
 (function( global, factory ) {
 

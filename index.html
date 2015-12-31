@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
         <style>
-        
+
             @font-face {
                 font-family: 'Vegur';
                 src: url('fonts/vegur-webfont.eot');
@@ -20,20 +20,21 @@
                      url('fonts/vegur-webfont.svg#vegurextralight') format('svg');
                 font-weight: normal;
                 font-style: normal;
-            
+
             }
         </style>
-        
-    <title>Smart Social Recruiting | Airflink</title>
-    
-    <link rel="shortcut icon" href="img/favicon4.ico"/>
+
+    <title>Connecting Experiences | Airflink</title>
+
+    <link rel="shortcut icon" href="img/faviconred.ico"/>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/clean-blog.css" rel="stylesheet">
     <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="css/searchbar.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -82,7 +83,15 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <button type="button" class="btn btn-danger btn-sm" style="text-align:center; font-size: 12px;">
+                        <!--//attempted popover-->
+                        <!--<button id="popoverData" class="btn" href="#" rel="popover" data-placement="bottom"
+                           data-original-title="My Biz card" data-trigger="hover">View Your Biz Card <img id="profileImg"></img></button>-->
+                        <input type="button" data-toggle="modal" data-target="#bizcard" style="text-align:center;" value="View Your Biz Card"
+                        class="btn btn-danger btn" id="viewBizCard">
+                        <input type="button" data-toggle="modal" data-target="#editprofile" style="text-align:center;" value="Edit Your Profile"
+                        class="btn btn-danger btn" id="editProfile">
+
+                        <button type="button" id="companylink" class="btn btn-danger btn-sm" style="text-align:center; font-size: 12px;">
                             <a href="companyindex.html">Are you a Company? Click Here!</a>
                         </button>
                     </li>
@@ -95,36 +104,186 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home4.jpg');">
+    <header class="intro-header" style="background-image: url('img/home5.jpg');">
         <div class="container">
-            <div class="row">
+            <div class="row" style="text-align: center;">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
                         <div class="site-heading">
                             <h1 style= "font-weight:300; font-size: 100px;text-align:center;"><span style="color:#ff4848";>Air</span>flink</h1>
                             <hr class="small">
                             <span class="subheading">meet your boss before your interview</span>
                             <br>
-                            <br>
-                            <br>
-                         <div class="row">
-                            <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community"
-                                   class="btn btn-danger btn-lg">
+
+<!--searchbar-->
+            <div class="input-group" id="adv-search" style="font-family: Vegur;">
+                <input type="text" class="form-control" placeholder="Search for companies" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="searchbtn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                    <label for="filter">Filter by</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>All Companies</option>
+                                        <option value="1">Company Name</option>
+                                        <option value="2">Industry</option>
+                                        <option value="3">Most Viewed</option>
+                                        <option value="4">Most Commented</option>
+                                    </select>
+                                  </div>
+
+                                </form>
+                            </div>
                         </div>
-                            <span class="subheading" style="font-size:18px">Stay Up to Date with Our Latest Videos!</span>
+                        <button type="button" class="searchbtn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                     </div>
                 </div>
             </div>
-  
+<!--searchbar end-->
+
+<br>
+<br>
+                        <div class="row">
+                            <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community"
+                                   class="btn btn-danger btn-lg" id="signUp">
+                             <input type="button" data-toggle="modal" data-target="#login" style="text-align:center;" value="Login here"
+                                   class="btn btn-danger btn-lg" id="logIn">
+                             <input type="button" style="text-align:center;" value="Logout" class="btn btn-danger btn-lg" id="logOut">
+                        </div>
+
+                            <span class="subheading" style="font-size:18px">Stay Up to Date with Our Latest Videos!</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+
+    <!-- Main Content -->
+
+    <h1 style= "font-weight: 500; font-size: 48px; text-align:center;">The <span style= "color:#ff4848;">Air</span>flink Advantage</h1>
+    <br>
+    <div class="row">
+        <div class="col-lg-12" style= "font-family: 'Vegur';font-weight: bolder">
+            <div class="col-lg-4">
+                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/bizcard.jpg" alt="">
+                <br>
+                <h3 style="text-align: center;"><span style= "color:#ff4848;">Online Business Card</span></h3>
+                <p style="text-align: center;">Sign up, create your own business card and display your personal brand.</p>
+            </div>
+
+
+           <div class="col-lg-4">
+                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/explore.jpg" alt="">
+                <br>
+                <h3 style="text-align: center;"><span style= "color:#ff4848;">Virtual Job Tour</span></h3>
+                <p style="text-align: center;">Explore companies through videos and learn more about their working culture.</p>
+            </div>
+
+           <div class="col-lg-4">
+                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/flink.jpg" alt="">
+                <br>
+                <h3 style="text-align: center;"><span style= "color:#ff4848;">Air Flink it!</span></h3>
+                <p style="text-align: center;">Flink your business card to the company and apply instantly.</p>
+            </div>
         </div>
-        
-        <!-- Modal -->
+    </div>
+
+        <div class="container" style= "text-align: center;">
+            <div class="row">
+                <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community" class="btn btn-danger btn-lg">
+            </div>
+        </div>
+        <hr>
+        <br>
+     <h1 style= "font-weight: 500; font-size: 48px; text-align:center;">Our Newest Videos</h1>
+        <br><br>
+     <div class="row" style= "font-family: 'Vegur'; text-align: center; margin-left: auto; margin-right: auto;">
+            <div class="col-md-4 portfolio-item">
+                     <iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/U7KWRJQ9yuQ" frameborder="0" allowfullscreen></iframe>
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#smsdome" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;"
+                            id="smsvideo">SmsDome</a>
+                </h3>
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>SmsDome is a mobile marketing solutions company that provides the platform and tools to create and execute successful
+                        mobile marketing initiatives.
+                        </p>
+                    </div>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                    <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/vaultdragon.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany" data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">Vault Dragon</a>
+                </h3>
+                <div class="row" style = "font-family: Vegur;">
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>Dubbed as the Dropbox for physical items, Vault Dragon offers a comprehensive storage solution.
+                        They deliver free storage boxes to the customers, and collect the boxes once the items are packed.
+                        They are stored securely until the customers request for a return.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 portfolio-item">
+                    <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/cadit.jpg"></img>
+
+                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
+                <h3>
+                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
+                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">CAD-IT</a>
+                </h3>
+                <div class="row" style = "font-family: Vegur;">
+                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
+                        <p>Providing world-class solutions, CAD-IT is a leading global certified Product Life Cycle Management (PLM), manufacturing
+                        and education provider.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <br>
+
+     <div class="container" style= "text-align: center;">
+            <div class="row">
+                <a href="companies.html" type="button" style="text-align:center;" class="btn btn-danger btn-lg">Browse More</a>
+            </div>
+        </div>
+     <br>
+
+    <div class="container" style= "text-align: center;">
+        <!-- Footer -->
+    <div class="row">
+        <div class="col-lg-12">
+        <p style= "font-family: 'Vegur';text-align: center; font-weight: bolder;">Copyright &copy; <span style="color:#ff4848; font-weight: 400;">
+        air</span>flink 2015<br><br><a href="https://www.facebook.com/airflink?ref=hl" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
+        <a href="https://airflink.wordpress.com/" target="_blank"><i class="fa fa-wordpress fa-fw"></i></a></p>
+        </div>
+    </div>
+    </div>
+    <!-- /.container -->
+
+<!-- Modal Registration-->
         <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
               <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Be the first to
-                  see our videos!</h3>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Register
+<!--                    <button type="button" class="btn btn-default" aria-label="Left Align" id="prev">
+                         <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align" id="next">
+                         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    </button>-->
+                  </h3>
               </div>
               <div class="modal-body">
                   <!-- Modal Registration form - START -->
@@ -132,40 +291,117 @@
               <div class="row">
                   <form role="form">
                       <div class="col-lg-6 col-md-6 col-sm-6">
-                          <div class="form-group">
-                              <label for="InputName">Name</label>
+                          <div class="form-group" id="fname">
+                              <label for="InputFName">Full Name</label>
                               <div class="input-group">
-                                  <input style="width:100%" type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Your Name" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>               
-                              </div>
-                          </div>
-                             
-                          <div class="form-group">
-                              <label for="InputEmail">Enter Email</label>
-                              <div class="input-group">
-                                  <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Your Email" required>
+                                  <input style="width:100%" type="text" class="form-control" name="inputFullName" id="inputFullName" placeholder="Enter Your Full Name" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
-                          
+
                           <div class="form-group">
-                              <label for="InputName">School/Organisation</label>
+                              <label for="InputPassword">Username</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" name="InputName" id="InputSchool" placeholder="Enter Your School or Organisation" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>                
-                          
-                          <div class="form-group">
-                              <label for="InputName">Field of Study/Work</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputName" id="InputStudy" placeholder="Enter Your Field of Study or Work" required>
+                                  <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Enter Your Username" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
-                          
-                              <p>By signing up you agree to the Terms & Conditions stated in our <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
-                             
+
+                          <div class="form-group">
+                              <label for="InputPassword">Password</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Enter Your Password" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="InputCPassword">Confirm Password</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control" id="inputCPassword" name="inputCPassword" placeholder="Confirm Your Password" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                            </div>
+
+                          <div class="form-group">
+                              <label for="InputEmail">Email Address</label>
+                              <div class="input-group">
+                                  <input type="email" class="form-control" name="InputName" id="inputEmail" placeholder="Enter Your Email" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="InputAge">Age</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputAge" id="inputAge" placeholder="Enter Your Age" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="InputGender">Gender</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputGender" id="inputGender" placeholder="Enter Your Gender" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                             <div class="form-group">
+                              <label for="InputNationality">Nationality</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputNationality" id="inputNationality" placeholder="Enter Your Nationality" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                              <div class="form-group">
+                              <label for="InputSchool">School/Organization</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputName" id="inputSchool" placeholder="Enter Your School/Organization" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="InputContact">Contact Number</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputContact" id="inputContact" placeholder="Enter Your Contact Number" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="InputEducation">Degree/Education</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputEducation" id="inputEducation" placeholder="Enter Your Degree/Education" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="InputSkills">Skills</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputSkills" id="inputSkills" placeholder="e.g. Productivity Tools, Coding, etc" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="InputObj">Objective Statement</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="InputObj" id="inputObj" placeholder="e.g. Sociable, Passionate, Ambitious" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+                          <label>Submit a profile photo here: (Optional)</label>
+                          <input type="file" id="profilePhotoFileUpload">
+                          <br>
+                          <label>Submit your resume here: (Optional)</label>
+                          <input type="file" id="profileResumeUpload">
+
+                        <p><input type="checkbox" required="true"> I agree to the Terms & Conditions stated in Airflink's <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
+
                           <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
                           <input type="submit" name="submit" id="submitForm" value="Sign Up" class="btn btn-danger">
@@ -176,111 +412,232 @@
           <br>
           </div>
           <!-- Modal Registration form - END -->
-                  
                   </div>
-               
               </div>
             </div>
           </div>
 
-    </header>
 
-    <!-- Main Content -->
-<!--    <h1 style= "font-family: 'Vegur'; text-align: center;">Recruitment Redefined</h1>
-    <br>
-    <hr>-->
-    <h1 style= "font-weight: 500; font-size: 48px; text-align:center;">The <span style= "color:#ff4848;">Air</span>flink Advantage</h1>
-    <div class="row" style= "font-family: 'Vegur'; text-align: center;">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">   
-            <h5 style="font-style: italic; font-weight: 500;">Getting You the <span style= "color:#ff4848;">Inside Information</span> of Your Dream Companies</h5>
-        </div>
-    <br>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-lg-12" style= "font-family: 'Vegur';font-weight: bolder">    
-            <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/discover.png" alt="">
-                <br>
-                <h3 style="text-align: center;"><span style= "color:#ff4848;">Discover Companies</span></h3>
-                <p style="text-align: center;">Browse our database of companies, their details and available job openings.</p>
-            </div>
-            
-            
-           <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/watch.png" alt="">
-                <br>
-                <h3 style="text-align: center;"><span style= "color:#ff4848;">Watch Videos</span></h3>
-                <p style="text-align: center;">Watch videos to find out more about the culture, the management and the company experience.</p>
-            </div>
-           
-           <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/apply.png" alt="">
-                <br>
-                <h3 style="text-align: center;"><span style= "color:#ff4848;">Apply!</span></h3>
-                <p style="text-align: center;">If you’re interested, apply to the company simply with a click of the button!</p>
-            </div>
-        </div>
-    </div>
-    <hr>
-        
-        <h1 style= "font-weight: 500; font-size: 48px; text-align:center;">Our <span style= "color:#ff4848;">Latest </span>Clients</h1>
+<!-- Modal Login-->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Login</h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="form-group">
+                              <label for="loginUsername">Username</label>
+                              <div class="input-group">
+                                  <input style="width:100%" type="text" class="form-control" name="InputName" id="loginUsername" placeholder="Enter Your Username" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
 
-    <br>
-        <div class="row" style= "font-family: 'Vegur'; text-align: center;">
-            <div class="row carousel-holder">
-                    <div class="col-md-2">
-                    </div>
-                    <div class="col-md-8">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="img/sslawlogo.png" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="img/vaultlogo.png" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="img/smsdomelogo.png" alt="">
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                    </div>
-                </div>
-        </div>
-    <hr>
-        
-    <div class="container" style= "text-align: center;">
-        <!-- Footer -->
-            <h1 style= "font-family: 'Vegur'; text-align: center;">Stay Up to Date with Our Latest Videos!</h1>
-            <br>
-                <div class="row">
-                    <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community"
-                        class="btn btn-danger btn-lg">
-                </div>
-            <hr>
-    <div class="row">
-        <div class="col-lg-12">
-        <p style= "font-family: 'Vegur';text-align: center; font-weight: bolder;">Copyright &copy; <span style="color:#ff4848; font-weight: 400;">
-        air</span>flink 2015<br><br><a href="https://www.facebook.com/airflink?ref=hl" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
-        <a href="https://airflink.wordpress.com/" target="_blank"><i class="fa fa-wordpress fa-fw"></i></a></p>
-        </div>
-    </div>
-    </div>
-    <!-- /.container -->
+                          <div class="form-group">
+                              <label for="loginPassword">Password</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control" id="loginPassword" name="InputPassword" placeholder="Enter Your Password" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
+                          <input type="submit" name="submit" id="submitLogin" value="Login" class="btn btn-danger">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+          <!-- Modal Login form - END -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
+<!-- Modal Biz Card-->
+        <div class="modal fade" id="bizcard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="profileFullName" style= "font-family: 'Vegur'; color: #000; text-align: left;"></h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+
+                          <!--biz card content-->
+                          <img style="float: right; width: 150px; border-radius: 1px; border: solid;" id="profileImg">
+                          <!--<div id="profileFullName"></div>-->
+                          <div>Objective Statement</div>
+                          <label id="profileObj"></label>
+                          <div>Skills</div>
+                          <label id="profileSkills"></label>
+                          <div>Education</div>
+                          <label id="profileEducation"></label>
+                          <div>Email</div>
+                          <label id="profileEmail"></label>
+                          <div>Contact Number</div>
+                          <label id="profileContact"></label>
+                             <br>
+                          <div class="modal-footer">
+                            <button class="btn btn-danger" id="profileResume" style="float: right;">Click for Resume</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+          <!-- Modal Login form - END -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
+<!-- Modal Edit Profile-->
+        <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Edit Your Profile Here</h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="form-group">
+                              <label for="EditFName">Full Name</label>
+                              <div class="input-group">
+                                  <input style="width:100%" type="text" class="form-control" name="editFullName" id="editFullName">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="EditPassword">Username</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" id="editUsername" name="editUsername">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="EditPassword">Password</label>
+                              <div class="input-group">
+                                  <input type="password" class="form-control" id="editPassword" name="editPassword" required>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="EditEmail">Email Address</label>
+                              <div class="input-group">
+                                  <input type="email" class="form-control" name="editName" id="editEmail">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="EditAge">Age</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditAge" id="editAge">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="EditGender">Gender</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditGender" id="editGender">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                             <div class="form-group">
+                              <label for="EditNationality">Nationality</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditNationality" id="editNationality">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                              <div class="form-group">
+                              <label for="EditSchool">School/Organisation</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditName" id="editSchool">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="EditContact">Contact Number</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditContact" id="editContact">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                           <div class="form-group">
+                              <label for="EditEducation">Degree/Education</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditEducation" id="editEducation">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="EditSkills">Skills</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditSkills" id="editSkills">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+
+                            <div class="form-group">
+                              <label for="EditObj">Objective Statement</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" name="EditObj" id="editObj">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                              </div>
+                          </div>
+                          <label>Upload a new Business Card Photo</label>
+                          <input type="file" id="editProfilePhotoFileUpload">
+                          <br>
+                          <label>Upload a new Resume</label>
+                          <input type="file" id="editProfileResumeUpload">
+
+                              <p>By signing up you agree to the Terms & Conditions stated in our <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
+
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm3">Close</button>
+                          <input type="submit" name="submit" id="submitEdit" value="Edit Profile" class="btn btn-danger">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+          <!-- Modal Registration form - END -->
+                  </div>
+              </div>
+            </div>
+          </div>
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
@@ -292,8 +649,10 @@
     <script src="js/clean-blog.min.js"></script>
 
     <!-- Parse Server JavaScript -->
-    <script src="js/parse-home.js"></script>
+    <script src="js/parse-user-index.js"></script>
 
+    <!--Sign Up JavaScript-->
+    <!--<script src="js/signup.js"></script>-->
 
 </body>
 
