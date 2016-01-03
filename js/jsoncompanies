@@ -1,0 +1,13 @@
+var smsdome = {
+    "title": "SmsDome",
+    "body": "SmsDome is a mobile marketing solutions company that provides the platform and tools to create and execute successful mobile marketing initiatives.",
+    "industry": "Communications Technology SMS Texting Messaging Phone Mobile Message",
+    "id": 1
+};
+
+var visenze = {
+    "title": "Visenze",
+    "body": "ViSenze is a Singapore-based startup providing visual search and visual image recognition for e-commerce and contextual advertising.",
+    "industry": "Digial Media Technology Image Recognition",
+    "id": 2
+};

@@ -9,14 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <meta property="og:title" content="Connecting Experiences | Airflink"/>
-    <meta property="og:image" content="archive/airflinklogo.png"/>
-    <meta property="og:description" content="A video paints a thousand pictures"/>
-    <meta property="og:url" content="airflink.com" />
-
         <style>
-
-            @font-face {
+        @font-face {
                 font-family: 'Vegur';
                 src: url('fonts/vegur-webfont.eot');
                 src: url('fonts/vegur-webfont.eot?#iefix') format('embedded-opentype'),
@@ -30,7 +24,7 @@
             }
         </style>
 
-    <title>Connecting Experiences | Airflink</title>
+    <title>Browse Companies | Airflink</title>
 
     <link rel="shortcut icon" href="img/faviconred.ico"/>
 
@@ -40,6 +34,7 @@
     <!-- Custom CSS -->
     <link href="css/clean-blog.css" rel="stylesheet">
     <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
     <link href="css/searchbar.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -69,6 +64,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <!--<a class="navbar-brand" href="index.html">Start Bootstrap</a>-->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,8 +74,9 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="companies.html">Companies</a>
+                        <a href="companies.html">companies</span></a>
                     </li>
+
                     <li>
                         <a href="about.html">About</a>
                     </li>
@@ -87,21 +84,21 @@
                         <a href="https://airflink.wordpress.com/" target="_blank">Resources</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <!--//attempted popover-->
-                        <!--<button id="popoverData" class="btn" href="#" rel="popover" data-placement="bottom"
-                           data-original-title="My Biz card" data-trigger="hover">View Your Biz Card <img id="profileImg"></img></button>-->
-                        <input type="button" data-toggle="modal" data-target="#bizcard" style="text-align:center;" value="View Your Biz Card"
-                        class="btn btn-danger btn" id="viewBizCard">
-                        <input type="button" data-toggle="modal" data-target="#editprofile" style="text-align:center;" value="Edit Your Profile"
-                        class="btn btn-danger btn" id="editProfile">
 
-                        <button type="button" id="companylink" class="btn btn-danger btn-sm" style="text-align:center; font-size: 12px;">
-                            <a href="companyindex.html">Are you a Company? Click Here!</a>
-                        </button>
+                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                    <input type="button" data-toggle="modal" data-target="#bizcard" style="text-align:center;" value="View Your Biz Card"
+                        class="btn btn-danger btn" id="viewBizCard">
+                    <input type="button" data-toggle="modal" data-target="#editprofile" style="text-align:center;" value="Edit Your Profile"
+                        class="btn btn-danger btn" id="editProfile">
+                    </li>
+                    <li>
+                    <button type="button" id="companylink" class="btn btn-danger btn-sm" style="text-align:center; font-size: 12px;">
+                            <a href="company_companies.html">Are you a Company? Click Here!</a>
+                    </button>
                     </li>
                 </ul>
+
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -110,19 +107,20 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home5.jpg');">
+    <header class="intro-header" style="background-image: url('img/companies.jpg')">
         <div class="container">
             <div class="row" style="text-align: center;">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                        <div class="site-heading">
-                            <h1 style= "font-weight:300; font-size: 100px;text-align:center;"><span style="color:#ff4848";>Air</span>flink</h1>
-                            <hr class="small">
-                            <span class="subheading">meet your boss before your interview</span>
-                            <br>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1 style= "font-weight:300; font-size: 100px;"><span style="color:#ff4848";></span>browse</h1>
+                        <hr class="small">
+                        <span class="subheading">man must explore, and this is exploration
+                        at its greatest</span>
+                        <br>
 
-<!--searchbar-->
+                        <!--searchbar-->
             <div class="input-group" id="adv-search" style="font-family: Vegur;">
-                <input type="text" class="form-control" placeholder="Search for companies" id="searchtext"/>
+                <input type="text" class="form-control" placeholder="Search for companies" id="searchvalue"/>
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg">
@@ -143,138 +141,33 @@
                                 </form>
                             </div>
                         </div>
-                        <button type="button" class="searchbtn btn-danger" id="searchsubmit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        <button type="button" id="searchsubmit" class="searchbtn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                     </div>
                 </div>
             </div>
 <!--searchbar end-->
-
-<br>
-<br>
+                        <br>
+                        <br>
                         <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
+                                <!--<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#companies" style="width: 80%" id="test">-->
+                                <!--    Tell us who's next!-->
+                                <!--</button>-->
                             <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community"
                                    class="btn btn-danger btn-lg" id="signUp">
                              <input type="button" data-toggle="modal" data-target="#login" style="text-align:center;" value="Login here"
                                    class="btn btn-danger btn-lg" id="logIn">
                              <input type="button" style="text-align:center;" value="Logout" class="btn btn-danger btn-lg" id="logOut">
-                        </div>
-
-                            <span class="subheading" style="font-size:18px">Stay Up to Date with Our Latest Videos!</span>
-
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+        </div>
     </header>
 
-    <!-- Main Content -->
-
-    <h1 style= "font-weight: 500; font-size: 48px; text-align:center;">The <span style= "color:#ff4848;">Air</span>flink Advantage</h1>
-    <br>
-    <div class="row">
-        <div class="col-lg-12" style= "font-family: 'Vegur';font-weight: bolder">
-            <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/bizcard.jpg" alt="">
-                <br>
-                <h3 style="text-align: center;"><span style= "color:#ff4848;">Online Business Card</span></h3>
-                <p style="text-align: center;">Sign up, create your own business card and display your personal brand.</p>
-            </div>
-
-
-           <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/explore.jpg" alt="">
-                <br>
-                <h3 style="text-align: center;"><span style= "color:#ff4848;">Virtual Job Tour</span></h3>
-                <p style="text-align: center;">Explore companies through videos and learn more about their working culture.</p>
-            </div>
-
-           <div class="col-lg-4">
-                <img style="margin-left: auto; margin-right: auto" class="img-circle img-responsive img-center" src="img/flink.jpg" alt="">
-                <br>
-                <h3 style="text-align: center;"><span style= "color:#ff4848;">Air Flink it!</span></h3>
-                <p style="text-align: center;">Flink your business card to the company and apply instantly.</p>
-            </div>
-        </div>
-    </div>
-
-        <div class="container" style= "text-align: center;">
-            <div class="row">
-                <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community" class="btn btn-danger btn-lg">
-            </div>
-        </div>
-        <hr>
-        <br>
-     <h1 style= "font-weight: 500; font-size: 48px; text-align:center;">Our Newest Videos</h1>
-        <br><br>
-     <div class="row" style= "font-family: 'Vegur'; text-align: center; margin-left: auto; margin-right: auto;">
-            <div class="col-md-4 portfolio-item">
-                     <iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/U7KWRJQ9yuQ" frameborder="0" allowfullscreen></iframe>
-                <h3>
-                    <a onmouseover="" data-toggle="modal" data-target="#smsdome" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;"
-                            id="smsvideo">SmsDome</a>
-                </h3>
-                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
-                        <p>SmsDome is a mobile marketing solutions company that provides the platform and tools to create and execute successful
-                        mobile marketing initiatives.
-                        </p>
-                    </div>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                    <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/vaultdragon.jpg"></img>
-
-                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
-                <h3>
-                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany" data-toggle="modal"
-                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">Vault Dragon</a>
-                </h3>
-                <div class="row" style = "font-family: Vegur;">
-                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
-                        <p>Dubbed as the Dropbox for physical items, Vault Dragon offers a comprehensive storage solution.
-                        They deliver free storage boxes to the customers, and collect the boxes once the items are packed.
-                        They are stored securely until the customers request for a return.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 portfolio-item">
-                    <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/cadit.jpg"></img>
-
-                    <!--<iframe style="border-top: solid; border-top-color: #ff4848;" width="300" height="200" src="https://www.youtube.com/embed/uSP8Vc16EOk" frameborder="0" allowfullscreen></iframe>-->
-                <h3>
-                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany"data-toggle="modal"
-                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">CAD-IT</a>
-                </h3>
-                <div class="row" style = "font-family: Vegur;">
-                    <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
-                        <p>Providing world-class solutions, CAD-IT is a leading global certified Product Life Cycle Management (PLM), manufacturing
-                        and education provider.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-     <br>
-
-     <div class="container" style= "text-align: center;">
-            <div class="row">
-                <a href="companies.html" type="button" style="text-align:center;" class="btn btn-danger btn-lg">Browse More</a>
-            </div>
-        </div>
-     <br>
-
-    <div class="container" style= "text-align: center;">
-        <!-- Footer -->
-    <div class="row">
-        <div class="col-lg-12">
-        <p style= "font-family: 'Vegur';text-align: center; font-weight: bolder;">Copyright &copy; <span style="color:#ff4848; font-weight: 400;">
-        air</span>flink 2015<br><br><a href="https://www.facebook.com/airflink?ref=hl" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
-        <a href="https://airflink.wordpress.com/" target="_blank"><i class="fa fa-wordpress fa-fw"></i></a></p>
-        </div>
-    </div>
-    </div>
-    <!-- /.container -->
+<!-- Post Content -->
+    <span id="result"></span>
 
 <!-- Modal Registration-->
         <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -380,7 +273,7 @@
                            <div class="form-group">
                               <label for="InputEducation">Degree/Education</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" name="InputEducation" id="inputEducation" placeholder="Enter Your Degree/Education" required>
+                                  <input type="text" class="form-control" name="InputEducation" id="inputEducation" placeholder="e.g. Productivity Tools, Coding, etc" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
@@ -388,7 +281,7 @@
                            <div class="form-group">
                               <label for="InputSkills">Skills</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" name="InputSkills" id="inputSkills" placeholder="e.g. Productivity Tools, Coding, etc" required>
+                                  <input type="text" class="form-control" name="InputSkills" id="inputSkills" placeholder="Enter Your Degree/Education" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
@@ -628,8 +521,6 @@
                           <label>Upload a new Resume</label>
                           <input type="file" id="editProfileResumeUpload">
 
-                              <p>By signing up you agree to the Terms & Conditions stated in our <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
-
                           <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm3">Close</button>
                           <input type="submit" name="submit" id="submitEdit" value="Edit Profile" class="btn btn-danger">
@@ -645,6 +536,20 @@
             </div>
           </div>
 
+    <div class="container">
+
+        <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <p style= "font-family: 'Vegur';text-align: center; font-weight: bolder;">Copyright &copy; <span style="color:#ff4848; font-weight: 400;">
+            air</span>flink 2015<br><br><a href="https://www.facebook.com/airflink?ref=hl" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
+            <a href="https://airflink.wordpress.com/" target="_blank"><i class="fa fa-wordpress fa-fw"></i></a></p>
+        </div>
+    </div>
+
+    </div>
+    <!-- /.container -->
+
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
 
@@ -655,10 +560,10 @@
     <script src="js/clean-blog.min.js"></script>
 
     <!-- Parse Server JavaScript -->
-    <script src="js/parse-user-index.js"></script>
+    <script src="js/profile.js"></script>
 
-    <!--Sign Up JavaScript-->
-    <!--<script src="js/signup.js"></script>-->
+    <!-- Search function Javascript with RequireJS -->
+    <script data-main="js/searchfunction.js" src="js/require.js"></script>
 
 </body>
 
