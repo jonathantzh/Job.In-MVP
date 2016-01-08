@@ -221,8 +221,7 @@
                      <!-- <img style="border-top: solid; border-top-color: #ff4848;" src="img/temp/goodrich.jpg"></img> -->
                      <iframe style="border-top: solid; border-top-color: #ff4848;" width="400" height="250" src="https://www.youtube.com/embed/U7KWRJQ9yuQ" frameborder="0" allowfullscreen></iframe>
                 <h3>
-                    <a onmouseover="" data-toggle="modal" data-target="#selectedCompany" data-toggle="modal"
-                         data-target="#selectedCompany" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">SmsDome</a>
+                    <a onmouseover="" data-toggle="modal" data-target="#smsdome" style= "cursor: pointer; font-family: 'Vegur'; text-align: center;">SmsDome</a>
                 </h3>
                 <div class="row" style = "font-family: Vegur;">
                     <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
@@ -708,91 +707,6 @@
               </div>
             </div>
           </div>
-          
-<!-- Modal SmsDome-->
-        <div class="modal fade" id="smsdome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
-                </div>
-                <div class="modal-body">
-                    <!-- Modal Company Description - START -->
-                    <div style="text-align:center;">
-                      <iframe style="border-top: solid; border-top-color: #ff4848;" width=95% height=280px src="https://www.youtube.com/embed/U7KWRJQ9yuQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-  <br>
-                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
-                      <div style="font-family: 'Vegur';">
-                        <h3 style="font-family: 'Vegur';">Logo</h3>
-                          <img width=100% src="img/smsdomelogo.png" alt="">
-                        <h3 style="font-family: 'Vegur';">Overview</h3>
-                        <p style= " color: #000; text-align: justify;">
-                            SmsDome is a mobile marketing solutions company that provides the platform and tools to create and execute successful
-                            mobile marketing initiatives.
-                        </p>
-
-                        <h3 style="font-family: 'Vegur';">Opportunities</h3>
-                          <div class="row" style= "font-family: 'Vegur'; text-align: center;">
-                              <button class="col-md-4 portfolio-item" style="border-radius: 50px; border: solid; border-color:#ff4848;"
-                              id="smsdomejob1" data-trigger="hover">
-                                  <h4>
-                                      Software Engineer Intern
-                                  </h4>
-                                      <!-- <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                                          <p>Develop SmsDome's groundbreaking new technologies in communications technology.
-                                          </p>
-                                      </div> -->
-                              </button>
-                              <button class="col-md-4 portfolio-item"  style="border-radius: 50px; border: solid;border-color:#ff4848;"
-                              id="smsdomejob2" data-trigger="hover">
-                                    <h4>
-                                        Accounts Executive
-                                    </h4>
-                                        <!-- <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
-                                            <p>Oversee SmsDome's managerial accounts and logistical solutions.
-                                            </p>
-                                        </div> -->
-                                </button>
-
-                              <button class="col-md-4 portfolio-item" style="border-radius: 50px; border: solid;border-color:#ff4848;"
-                              id="smsdomejob3" data-trigger="hover">
-                                    <h4>
-                                        Marketing Executive
-                                    </h4>
-                                    <!-- <div class="col-lg-10 col-lg-offset-1  col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-justify">
-                                        <p>Lead SmsDome towards greater brand awareness and audience reach.
-                                        </p>
-                                    </div> -->
-                              </button>
-                            </div>
-
-                        <h3 style="font-family: 'Vegur';">Contact</h3>
-                        <div>
-                          <label>Address:</label> 47 Jln Pemimpin, 577200<br>
-                          <div style="text-align: center;">
-                            <img src="img/temp/smsdomelocation.jpg"> <br><br>
-                          </div>
-                          <label>Phone:</label> 6767 3663<br>
-                          <label>Hours:</label> 9am to 6am<br>
-                          <label>Email:</label> sales@smsdome.com<br>
-                          <label>Website:</label> http://www.smsdome.com/sg/<br>
-                          <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
-                        </div>
-
-
-
-                      </div>
-
-                      <div style="text-align: center;">
-                          <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
-                      </div>
-              </div>
-              </div>
-            </div>
-        </div>
-<!-- Modal SmsDome - END -->
 
 <div class="container" style= "text-align: center;">
     <!-- Footer -->
@@ -820,7 +734,316 @@
     <!-- Parse Server JavaScript -->
     <script src="js/parse-user-companies.js"></script>
 
+    <!-- Parse Server JavaScript Update Company Positions-->
+    <script src="js/retrievepositions.js"></script>
 
 </body>
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="smsdome" tabindex="-1" role="dialog" aria-labelledby="smsdomemodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="smspositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="goodrich" tabindex="-1" role="dialog" aria-labelledby="goodrichmodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="goodrichpositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="ck" tabindex="-1" role="dialog" aria-labelledby="ckmodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="ckpositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="visenze" tabindex="-1" role="dialog" aria-labelledby="visenzemodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="visenzepositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="cadit" tabindex="-1" role="dialog" aria-labelledby="cadit">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="caditpositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="clariti" tabindex="-1" role="dialog" aria-labelledby="claritimodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="claritipositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="cordlife" tabindex="-1" role="dialog" aria-labelledby="cordlifemodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="cordlifepositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="ecovis" tabindex="-1" role="dialog" aria-labelledby="ecovismodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="ecovispositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
+<!-- Modal SmsDome-->
+        <div class="modal fade" id="etonhouse" tabindex="-1" role="dialog" aria-labelledby="etonhousemodal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">SmsDome: Messaging Anytime, Anywhere</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal Company Description - START -->
+
+                        <!-- <h3 style="text-align: center; font-family: 'Vegur';">SmsDome  |  Est. 2013</h3> -->
+                    <div style="font-family: 'Vegur';">
+
+                      <h3 style="font-family: 'Vegur';">Opportunities:</h3>
+                      <p id="etonhousepositions"></p>
+
+                      <h3 style="font-family: 'Vegur';">Contact</h3>
+                        <label>Phone:</label> 6767 3663<br>
+                        <label>Hours:</label> 9am to 6am<br>
+                        <label>Email:</label> sales@smsdome.com<br>
+                        <label>Website:</label> http://www.smsdome.com/sg/<br>
+                        <label>Facebook:</label> https://www.facebook.com/SmsDome/<br>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;">
+                    <img class="btn applyvideo" data-trigger="hover" alt="applications" src="img/applyvideo.png" id="applyvideoid"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+<!-- Modal SmsDome - END -->
+
 
 </html>
