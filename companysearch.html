@@ -26,7 +26,7 @@
 
     <title>Browse Companies | Airflink</title>
 
-    <link rel="shortcut icon" href="img/faviconred.ico"/>
+    <link rel="shortcut icon" href="img/faviconblue.ico"/>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -255,20 +255,14 @@
 </div>
 
 <!-- /.row -->
+
 <!-- Modal Registration-->
         <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
               <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Register
-<!--                    <button type="button" class="btn btn-default" aria-label="Left Align" id="prev">
-                         <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" id="next">
-                         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                    </button>-->
-                  </h3>
+                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Register</h3>
               </div>
               <div class="modal-body">
                   <!-- Modal Registration form - START -->
@@ -276,18 +270,19 @@
               <div class="row">
                   <form role="form">
                       <div class="col-lg-6 col-md-6 col-sm-6">
-                          <div class="form-group" id="fname">
-                              <label for="InputFName">Full Name</label>
+                          <div class="form-group">
+                              <label for="InputFName">Company Name</label>
                               <div class="input-group">
-                                  <input style="width:100%" type="text" class="form-control" name="inputFullName" id="inputFullName" placeholder="Enter Your Full Name" required>
+                                  <input style="width:100%" type="text" class="form-control" name="inputFullName" id="inputCompanyName"
+                                         placeholder="Enter Your Company Name" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
 
                           <div class="form-group">
-                              <label for="InputPassword">Username</label>
+                              <label for="InputPassword">Email Address (Username)</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Enter Your Username" required>
+                                  <input type="email" class="form-control" id="inputUsername" name="inputUsername" placeholder="Enter Your Email Address" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
@@ -309,46 +304,6 @@
                             </div>
 
                           <div class="form-group">
-                              <label for="InputEmail">Email Address</label>
-                              <div class="input-group">
-                                  <input type="email" class="form-control" name="InputName" id="inputEmail" placeholder="Enter Your Email" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="InputAge">Age</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputAge" id="inputAge" placeholder="Enter Your Age" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="InputGender">Gender</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputGender" id="inputGender" placeholder="Enter Your Gender" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                             <div class="form-group">
-                              <label for="InputNationality">Nationality</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputNationality" id="inputNationality" placeholder="Enter Your Nationality" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                              <div class="form-group">
-                              <label for="InputSchool">School/Organization</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputName" id="inputSchool" placeholder="Enter Your School/Organization" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
                               <label for="InputContact">Contact Number</label>
                               <div class="input-group">
                                   <input type="text" class="form-control" name="InputContact" id="inputContact" placeholder="Enter Your Contact Number" required>
@@ -356,33 +311,35 @@
                               </div>
                           </div>
 
-                           <div class="form-group">
-                              <label for="InputEducation">Degree/Education</label>
+                            <div class="form-group">
+                              <label for="InputSchool">Available Positions</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" name="InputEducation" id="inputEducation" placeholder="e.g. Productivity Tools, Coding, etc" required>
+                                  <input type="text" class="form-control" name="InputName" id="inputSchool" placeholder="Enter Your Available Positions" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
 
+
                            <div class="form-group">
-                              <label for="InputSkills">Skills</label>
+                              <label for="InputEducation">Company Summary Description (Max 100 Characters)</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" name="InputSkills" id="inputSkills" placeholder="Enter Your Degree/Education" required>
+                                  <input type="text" class="form-control" name="InputEducation" id="inputEducation" placeholder="Enter Your Company Summary Description" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
 
                             <div class="form-group">
-                              <label for="InputObj">Objective Statement</label>
+                              <label for="InputObj">Company Description</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" name="InputObj" id="inputObj" placeholder="e.g. Sociable, Passionate, Ambitious" required>
+                                  <textarea type="text" class="form-control" name="InputObj" id="inputObj" placeholder="Enter Your Full Company Description" required></textarea>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
-                          <label>Submit a profile photo here: (Optional)</label>
-                          <input type="file" id="profilePhotoFileUpload">
+
+                          <label>Submit your company logo here: </label>
+                          <input type="file" id="profilePhotoFileUpload" required>
                           <br>
-                          <label>Submit your resume here: (Optional)</label>
+                          <label>Submit your company video here: (Optional)</label>
                           <input type="file" id="profileResumeUpload">
 
                         <p><input type="checkbox" required="true"> I agree to the Terms & Conditions stated in Airflink's <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
@@ -418,9 +375,9 @@
                   <form role="form">
                       <div class="col-lg-6 col-md-6 col-sm-6">
                           <div class="form-group">
-                              <label for="loginUsername">Username</label>
+                              <label for="loginUsername">Email Address</label>
                               <div class="input-group">
-                                  <input style="width:100%" type="text" class="form-control" name="InputName" id="loginUsername" placeholder="Enter Your Username" required>
+                                  <input style="width:100%" type="email" class="form-control" name="InputName" id="loginUsername" placeholder="Enter Your Email Address">
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
@@ -428,7 +385,7 @@
                           <div class="form-group">
                               <label for="loginPassword">Password</label>
                               <div class="input-group">
-                                  <input type="password" class="form-control" id="loginPassword" name="InputPassword" placeholder="Enter Your Password" required>
+                                  <input type="password" class="form-control" id="loginPassword" name="InputPassword" placeholder="Enter Your Password">
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
@@ -464,21 +421,18 @@
                       <div class="col-lg-6 col-md-6 col-sm-6">
 
                           <!--biz card content-->
-                          <img style="float: right; width: 150px; border-radius: 1px; border: solid;" id="profileImg">
-                          <!--<div id="profileFullName"></div>-->
-                          <div>Objective Statement</div>
-                          <label id="profileObj"></label>
-                          <div>Skills</div>
-                          <label id="profileSkills"></label>
-                          <div>Education</div>
+                          <div>Company Logo</div>
+                            <img style="width: 90%; border-radius: 1px; border: solid;" id="profileImg">
+                          <div><br>Company Description</div>
                           <label id="profileEducation"></label>
                           <div>Email</div>
                           <label id="profileEmail"></label>
                           <div>Contact Number</div>
                           <label id="profileContact"></label>
-                             <br>
+                            <br>
                           <div class="modal-footer">
-                            <button class="btn btn-primary" id="profileResume" style="float: right;">Click for Resume</button>
+                            <a type="button" href="https://www.youtube.com/watch?v=U7KWRJQ9yuQ" class="btn btn-primary" id="profileVideo"
+                               target="blank" style="float: right;">Click for Company Video</a>
                             <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
                           </div>
                       </div>
@@ -507,7 +461,7 @@
                   <form role="form">
                       <div class="col-lg-6 col-md-6 col-sm-6">
                           <div class="form-group">
-                              <label for="EditFName">Full Name</label>
+                              <label for="EditFName">Company Name</label>
                               <div class="input-group">
                                   <input style="width:100%" type="text" class="form-control" name="editFullName" id="editFullName">
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
@@ -515,9 +469,9 @@
                           </div>
 
                           <div class="form-group">
-                              <label for="EditPassword">Username</label>
+                              <label for="EditPassword">Email Address (Username)</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" id="editUsername" name="editUsername">
+                                  <input type="email" class="form-control" id="editUsername" name="editUsername">
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
@@ -525,45 +479,13 @@
                           <div class="form-group">
                               <label for="EditPassword">Password</label>
                               <div class="input-group">
-                                  <input type="password" class="form-control" id="editPassword" name="editPassword" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="EditEmail">Email Address</label>
-                              <div class="input-group">
-                                  <input type="email" class="form-control" name="editName" id="editEmail">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="EditAge">Age</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditAge" id="editAge">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="EditGender">Gender</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditGender" id="editGender">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                             <div class="form-group">
-                              <label for="EditNationality">Nationality</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditNationality" id="editNationality">
+                                  <input type="password" class="form-control" id="editPassword" name="editPassword">
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
 
                               <div class="form-group">
-                              <label for="EditSchool">School/Organisation</label>
+                              <label for="EditSchool">Available Positions</label>
                               <div class="input-group">
                                   <input type="text" class="form-control" name="EditName" id="editSchool">
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
@@ -579,7 +501,7 @@
                           </div>
 
                            <div class="form-group">
-                              <label for="EditEducation">Degree/Education</label>
+                              <label for="EditEducation">Company Summary Description (Max 100 characters)</label>
                               <div class="input-group">
                                   <input type="text" class="form-control" name="EditEducation" id="editEducation">
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
@@ -587,24 +509,16 @@
                           </div>
 
                             <div class="form-group">
-                              <label for="EditSkills">Skills</label>
+                              <label for="EditObj">Company Full Description</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" name="EditSkills" id="editSkills">
+                                  <textarea type="text" class="form-control" name="EditObj" id="editObj"></textarea>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
-
-                            <div class="form-group">
-                              <label for="EditObj">Objective Statement</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditObj" id="editObj">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-                          <label>Upload a new Business Card Photo</label>
+                          <label>Upload a new Company Logo</label>
                           <input type="file" id="editProfilePhotoFileUpload">
                           <br>
-                          <label>Upload a new Resume</label>
+                          <label>Upload a new Company Video</label>
                           <input type="file" id="editProfileResumeUpload">
 
                           <div class="modal-footer">
@@ -646,13 +560,11 @@
     <script src="js/clean-blog.min.js"></script>
 
     <!-- Parse Server JavaScript -->
-    <script src="js/profile.js"></script>
+    <script src="js/companysearchprofile.js"></script>
 
     <!-- Search function Javascript with RequireJS -->
     <script data-main="js/companysearchfunction.js" src="js/require.js"></script>
 
-    <!-- Search Value Javascript -->
-    <script src="js/parse-search.js"></script>
 
 </body>
 

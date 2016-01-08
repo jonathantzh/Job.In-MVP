@@ -1,4 +1,22 @@
-Parse.initialize("jYY9sPa7vefy9J3A1YxwVLfUTMRBVzIc9SefECZ7", "rrGAz3YXeI3Pijz2CmBum2gDIWpzUQDbsjpwvfSN");
+Parse.initialize("IfS2Dus2BdLSgzIQuxO6MU3Pr4Nw2zDanuhMJUQH", "H2mqcIuwNtgvApuiU9S7fcKCC3USWfgQwO1CRVsq");
+
+var SearchQueries = Parse.Object.extend("SearchQueries");
+var searchQuery = new SearchQueries();
+
+document.getElementById("searchsubmit").addEventListener("click" , function() {
+  searchQuery.set("query", document.getElementById("searchtext").value);
+  if(currentUser) {
+    searchQuery.set("user", currentUser.get("username"));
+  }
+  searchQuery.save(null, {
+    success: function(searchQuery) {
+      console.log("Success!");
+    },
+    error: function(searchQuery, error) {
+      console.log('Failed to create new object, with error code: ' + error.message);
+    }
+  });
+});
 
 var currentUser = Parse.User.current();
 if (currentUser) {
@@ -16,22 +34,24 @@ if (currentUser) {
     $('#profileFullName').html(currentUser.get("fullname"));
     $('#profileObj').html(currentUser.get("objective"));
     $('#profileEducation').html(currentUser.get("education"));
-    $('#profileEmail').html(currentUser.get("email"));
+    $('#profileEmail').html(currentUser.get("username"));
     $('#profileContact').html(currentUser.get("contact"));
-    $('#profileSkills').html(currentUser.get("skills"));
+
+     //attempted popover
+    $('.applyvideo').popover({
+    html: true,
+    content: function() {
+        return 'Click to Submit Your Business Card';
+    }
+    });
 
     //editprofile. password not possible
     $('#editFullName').attr("value", currentUser.get("fullname"));
     $('#editUsername').attr("value", currentUser.get("username"));
     $('#editSchool').attr("value", currentUser.get("school"));
-    $('#editAge').attr("value", currentUser.get("age"));
-    $('#editGender').attr("value", currentUser.get("gender"));
-    $('#editNationality').attr("value", currentUser.get("nationality"));
     $('#editObj').attr("value", currentUser.get("objective"));
     $('#editEducation').attr("value", currentUser.get("education"));
-    $('#editEmail').attr("value", currentUser.get("email"));
     $('#editContact').attr("value", currentUser.get("contact"));
-    $('#editSkills').attr("value", currentUser.get("skills"));
 
     $('#logIn').hide();
     $('#signUp').hide();
@@ -44,8 +64,7 @@ if (currentUser) {
 }
 
 document.getElementById("submitForm").addEventListener("click", function(){
-    if (document.getElementById("inputUsername").value
-        && document.getElementById("inputPassword").value) {
+    if (document.getElementById("inputUsername").value && document.getElementById("inputPassword").value) {
         signUp();
         $("#closeForm").click();
         document.getElementById("inputUsername").value = '';
@@ -81,18 +100,14 @@ document.getElementById("logOut").addEventListener("click", function(){
 //function definitions
 
 function signUp() {
-    var fullname = document.getElementById('inputFullName').value;
+    var fullname = document.getElementById('inputCompanyName').value;
     var username = document.getElementById('inputUsername').value;
     var password = document.getElementById('inputPassword').value;
-    var email = document.getElementById('inputEmail').value;
     var school = document.getElementById('inputSchool').value;
-    var age = document.getElementById('inputAge').value;
-    var gender = document.getElementById('inputGender').value;
-    var nationality = document.getElementById('inputNationality').value;
     var contact = document.getElementById('inputContact').value;
     var education = document.getElementById('inputEducation').value;
     var objective = document.getElementById('inputObj').value;
-    var skills = document.getElementById('inputSkills').value;
+
 
     var fileUploadControl = $("#profilePhotoFileUpload")[0];
     if (fileUploadControl.files.length > 0) {
@@ -112,15 +127,10 @@ function signUp() {
     user.set("fullname", fullname);
     user.set("username", username);
     user.set("password", password);
-    user.set("email", email);
     user.set("school", school);
-    user.set("age", age);
-    user.set("gender", gender);
-    user.set("nationality", nationality);
     user.set("contact", contact);
     user.set("education", education);
     user.set("objective", objective);
-    user.set("skills", skills);
 
     user.set("profilePic", profilePhoto);
     user.set("profileResume", profileResume);
@@ -159,15 +169,11 @@ function editProfile() {
     var fullname = document.getElementById('editFullName').value;
     var username = document.getElementById('editUsername').value;
     var password = document.getElementById('editPassword').value;
-    var email = document.getElementById('editEmail').value;
     var school = document.getElementById('editSchool').value;
-    var age = document.getElementById('editAge').value;
-    var gender = document.getElementById('editGender').value;
-    var nationality = document.getElementById('editNationality').value;
     var contact = document.getElementById('editContact').value;
     var education = document.getElementById('editEducation').value;
     var objective = document.getElementById('editObj').value;
-    var skills = document.getElementById('editSkills').value;
+
 
     var fileUploadControl = $("#editProfilePhotoFileUpload")[0];
     if (fileUploadControl.files.length > 0) {
@@ -189,15 +195,10 @@ function editProfile() {
     editUser.set("fullname", fullname);
     editUser.set("username", username);
     editUser.set("password", password);
-    editUser.set("email", email);
     editUser.set("school", school);
-    editUser.set("age", age);
-    editUser.set("gender", gender);
-    editUser.set("nationality", nationality);
     editUser.set("contact", contact);
     editUser.set("education", education);
     editUser.set("objective", objective);
-    editUser.set("skills", skills);
     editUser.set("profilePic", profilePhoto);
     editUser.set("profileResume", profileResume);
 

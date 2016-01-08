@@ -16,7 +16,7 @@ if (currentUser) {
     $('#profileFullName').html(currentUser.get("fullname"));
     $('#profileObj').html(currentUser.get("objective"));
     $('#profileEducation').html(currentUser.get("education"));
-    $('#profileEmail').html(currentUser.get("email"));
+    $('#profileEmail').html(currentUser.get("username"));
     $('#profileContact').html(currentUser.get("contact"));
     $('#profileSkills').html(currentUser.get("skills"));
 
@@ -57,13 +57,11 @@ if (currentUser) {
     //editprofile. password not possible
     $('#editFullName').attr("value", currentUser.get("fullname"));
     $('#editUsername').attr("value", currentUser.get("username"));
-    $('#editSchool').attr("value", currentUser.get("school"));
     $('#editAge').attr("value", currentUser.get("age"));
     $('#editGender').attr("value", currentUser.get("gender"));
     $('#editNationality').attr("value", currentUser.get("nationality"));
     $('#editObj').attr("value", currentUser.get("objective"));
     $('#editEducation').attr("value", currentUser.get("education"));
-    $('#editEmail').attr("value", currentUser.get("email"));
     $('#editContact').attr("value", currentUser.get("contact"));
     $('#editSkills').attr("value", currentUser.get("skills"));
 
@@ -118,8 +116,6 @@ function signUp() {
     var fullname = document.getElementById('inputFullName').value;
     var username = document.getElementById('inputUsername').value;
     var password = document.getElementById('inputPassword').value;
-    var email = document.getElementById('inputEmail').value;
-    var school = document.getElementById('inputSchool').value;
     var age = document.getElementById('inputAge').value;
     var gender = document.getElementById('inputGender').value;
     var nationality = document.getElementById('inputNationality').value;
@@ -146,8 +142,6 @@ function signUp() {
     user.set("fullname", fullname);
     user.set("username", username);
     user.set("password", password);
-    user.set("email", email);
-    user.set("school", school);
     user.set("age", age);
     user.set("gender", gender);
     user.set("nationality", nationality);
@@ -193,8 +187,6 @@ function editProfile() {
     var fullname = document.getElementById('editFullName').value;
     var username = document.getElementById('editUsername').value;
     var password = document.getElementById('editPassword').value;
-    var email = document.getElementById('editEmail').value;
-    var school = document.getElementById('editSchool').value;
     var age = document.getElementById('editAge').value;
     var gender = document.getElementById('editGender').value;
     var nationality = document.getElementById('editNationality').value;
@@ -223,8 +215,6 @@ function editProfile() {
     editUser.set("fullname", fullname);
     editUser.set("username", username);
     editUser.set("password", password);
-    editUser.set("email", email);
-    editUser.set("school", school);
     editUser.set("age", age);
     editUser.set("gender", gender);
     editUser.set("nationality", nationality);

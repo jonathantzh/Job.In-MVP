@@ -16,7 +16,7 @@ if (currentUser) {
     $('#profileFullName').html(currentUser.get("fullname"));
     $('#profileObj').html(currentUser.get("objective"));
     $('#profileEducation').html(currentUser.get("education"));
-    $('#profileEmail').html(currentUser.get("email"));
+    $('#profileEmail').html(currentUser.get("username"));
     $('#profileContact').html(currentUser.get("contact"));
 
      //attempted popover
@@ -33,7 +33,6 @@ if (currentUser) {
     $('#editSchool').attr("value", currentUser.get("school"));
     $('#editObj').attr("value", currentUser.get("objective"));
     $('#editEducation').attr("value", currentUser.get("education"));
-    $('#editEmail').attr("value", currentUser.get("email"));
     $('#editContact').attr("value", currentUser.get("contact"));
 
     $('#logIn').hide();
@@ -86,7 +85,6 @@ function signUp() {
     var fullname = document.getElementById('inputCompanyName').value;
     var username = document.getElementById('inputUsername').value;
     var password = document.getElementById('inputPassword').value;
-    var email = document.getElementById('inputEmail').value;
     var school = document.getElementById('inputSchool').value;
     var contact = document.getElementById('inputContact').value;
     var education = document.getElementById('inputEducation').value;
@@ -111,7 +109,6 @@ function signUp() {
     user.set("fullname", fullname);
     user.set("username", username);
     user.set("password", password);
-    user.set("email", email);
     user.set("school", school);
     user.set("contact", contact);
     user.set("education", education);
@@ -154,7 +151,6 @@ function editProfile() {
     var fullname = document.getElementById('editFullName').value;
     var username = document.getElementById('editUsername').value;
     var password = document.getElementById('editPassword').value;
-    var email = document.getElementById('editEmail').value;
     var school = document.getElementById('editSchool').value;
     var contact = document.getElementById('editContact').value;
     var education = document.getElementById('editEducation').value;
@@ -181,7 +177,6 @@ function editProfile() {
     editUser.set("fullname", fullname);
     editUser.set("username", username);
     editUser.set("password", password);
-    editUser.set("email", email);
     editUser.set("school", school);
     editUser.set("contact", contact);
     editUser.set("education", education);

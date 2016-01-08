@@ -347,427 +347,344 @@
             </div>
         </div>
 
-<!-- Modal Feedback-->
-        <div class="modal fade" id="companies" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Tell us which company you want to see next!</h3>
-              </div>
-              <div class="modal-body">
-                  <!-- Modal Registration form - START -->
-              <div class="container" style= "font-family: 'Vegur'; color: #000;">
-              <div class="row">
-                  <form role="form">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                          <!--<div style = "text-align: left; font-size: 18px;"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
-                          <div class="form-group">
-                              <label for="InputName">Name</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputName" id="InputFname" placeholder="Enter Your Name" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
 
-                          <div class="form-group">
-                              <label for="InputEmail">Enter Email</label>
-                              <div class="input-group">
-                                  <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Your Email" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="InputName">Feedback</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputFeedback" id="InputFeedback" placeholder="Tell us your feedback" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
-                          <input type="submit" name="submit" id="submitForm" value="Submit" class="btn btn-danger">
-                          </div>
+        <!-- Modal Registration-->
+                <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Register
+        <!--                    <button type="button" class="btn btn-default" aria-label="Left Align" id="prev">
+                                 <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default" aria-label="Left Align" id="next">
+                                 <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                            </button>-->
+                          </h3>
                       </div>
-                  </form>
-              </div>
-          <br>
-          </div>
-              </div>
-              </div>
-            </div>
-        </div>
-<!-- Modal Feedback form - END -->
+                      <div class="modal-body">
+                          <!-- Modal Registration form - START -->
+                      <div class="container" style= "font-family: 'Vegur'; color: #000;">
+                      <div class="row">
+                          <form role="form">
+                              <div class="col-lg-6 col-md-6 col-sm-6">
+                                  <div class="form-group" id="fname">
+                                      <label for="InputFName">Full Name</label>
+                                      <div class="input-group">
+                                          <input style="width:100%" type="text" class="form-control" name="inputFullName" id="inputFullName" placeholder="Enter Your Full Name" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
 
-<!-- Modal Registration-->
-        <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Register
-<!--                    <button type="button" class="btn btn-default" aria-label="Left Align" id="prev">
-                         <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" id="next">
-                         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                    </button>-->
-                  </h3>
-              </div>
-              <div class="modal-body">
-                  <!-- Modal Registration form - START -->
-              <div class="container" style= "font-family: 'Vegur'; color: #000;">
-              <div class="row">
-                  <form role="form">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                          <div class="form-group" id="fname">
-                              <label for="InputFName">Full Name</label>
-                              <div class="input-group">
-                                  <input style="width:100%" type="text" class="form-control" name="inputFullName" id="inputFullName" placeholder="Enter Your Full Name" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                  <div class="form-group">
+                                      <label for="InputPassword">Email Address (Username)</label>
+                                      <div class="input-group">
+                                          <input type="email" class="form-control" id="inputUsername" name="inputUsername" placeholder="Enter Your Email Address (Username)" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="InputPassword">Password</label>
+                                      <div class="input-group">
+                                          <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Enter Your Password" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                    <div class="form-group">
+                                      <label for="InputCPassword">Confirm Password</label>
+                                      <div class="input-group">
+                                          <input type="password" class="form-control" id="inputCPassword" name="inputCPassword" placeholder="Confirm Your Password" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                    </div>
+
+                                   <div class="form-group">
+                                      <label for="InputAge">Age</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="InputAge" id="inputAge" placeholder="Enter Your Age" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                    <div class="form-group">
+                                      <label for="InputGender">Gender</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="InputGender" id="inputGender" placeholder="Enter Your Gender" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                     <div class="form-group">
+                                      <label for="InputNationality">Nationality</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="InputNationality" id="inputNationality" placeholder="Enter Your Nationality" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="InputContact">Contact Number</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="InputContact" id="inputContact" placeholder="Enter Your Contact Number" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                   <div class="form-group">
+                                      <label for="InputEducation">Highest Qualification</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="InputEducation" id="inputEducation" placeholder="Enter Your Degree/Education" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                   <div class="form-group">
+                                      <label for="InputSkills">Skills</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="InputSkills" id="inputSkills" placeholder="e.g. Productivity Tools, Coding, etc" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                    <div class="form-group">
+                                      <label for="InputObj">Objective Statement</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="InputObj" id="inputObj" placeholder="e.g. Sociable, Passionate, Ambitious" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+                                  <label>Submit a profile photo here: (Optional)</label>
+                                  <input type="file" id="profilePhotoFileUpload">
+                                  <br>
+                                  <label>Submit your resume here: (Optional)</label>
+                                  <input type="file" id="profileResumeUpload">
+
+                                <p><input type="checkbox" required="true"> I agree to the Terms & Conditions stated in Airflink's <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
+
+                                  <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
+                                  <input type="submit" name="submit" id="submitForm" value="Sign Up" class="btn btn-danger">
+                                  </div>
                               </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="InputPassword">Username</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Enter Your Username" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="InputPassword">Password</label>
-                              <div class="input-group">
-                                  <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Enter Your Password" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="InputCPassword">Confirm Password</label>
-                              <div class="input-group">
-                                  <input type="password" class="form-control" id="inputCPassword" name="inputCPassword" placeholder="Confirm Your Password" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                            </div>
-
-                          <div class="form-group">
-                              <label for="InputEmail">Email Address</label>
-                              <div class="input-group">
-                                  <input type="email" class="form-control" name="InputName" id="inputEmail" placeholder="Enter Your Email" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="InputAge">Age</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputAge" id="inputAge" placeholder="Enter Your Age" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="InputGender">Gender</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputGender" id="inputGender" placeholder="Enter Your Gender" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                             <div class="form-group">
-                              <label for="InputNationality">Nationality</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputNationality" id="inputNationality" placeholder="Enter Your Nationality" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                              <div class="form-group">
-                              <label for="InputSchool">School/Organization</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputName" id="inputSchool" placeholder="Enter Your School/Organization" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="InputContact">Contact Number</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputContact" id="inputContact" placeholder="Enter Your Contact Number" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="InputEducation">Degree/Education</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputEducation" id="inputEducation" placeholder="Enter Your Degree/Education" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="InputSkills">Skills</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputSkills" id="inputSkills" placeholder="e.g. Productivity Tools, Coding, etc" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="InputObj">Objective Statement</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputObj" id="inputObj" placeholder="e.g. Sociable, Passionate, Ambitious" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-                          <label>Submit a profile photo here: (Optional)</label>
-                          <input type="file" id="profilePhotoFileUpload">
-                          <br>
-                          <label>Submit your resume here: (Optional)</label>
-                          <input type="file" id="profileResumeUpload">
-
-                        <p><input type="checkbox" required="true"> I agree to the Terms & Conditions stated in Airflink's <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
-
-                          <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm">Close</button>
-                          <input type="submit" name="submit" id="submitForm" value="Sign Up" class="btn btn-danger">
-                          </div>
+                          </form>
                       </div>
-                  </form>
-              </div>
-          <br>
-          </div>
-          <!-- Modal Registration form - END -->
+                  <br>
                   </div>
-              </div>
-            </div>
-          </div>
-
-
-<!-- Modal Login-->
-        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Login</h3>
-              </div>
-              <div class="modal-body">
-                  <!-- Modal Registration form - START -->
-              <div class="container" style= "font-family: 'Vegur'; color: #000;">
-              <div class="row">
-                  <form role="form">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                          <div class="form-group">
-                              <label for="loginUsername">Username</label>
-                              <div class="input-group">
-                                  <input style="width:100%" type="text" class="form-control" name="InputName" id="loginUsername" placeholder="Enter Your Username" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="loginPassword">Password</label>
-                              <div class="input-group">
-                                  <input type="password" class="form-control" id="loginPassword" name="InputPassword" placeholder="Enter Your Password" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
-                          <input type="submit" name="submit" id="submitLogin" value="Login" class="btn btn-danger">
+                  <!-- Modal Registration form - END -->
                           </div>
                       </div>
-                  </form>
-              </div>
-          <br>
-          </div>
-          <!-- Modal Login form - END -->
+                    </div>
                   </div>
-              </div>
-            </div>
-          </div>
 
-<!-- Modal Biz Card-->
-        <div class="modal fade" id="bizcard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="profileFullName" style= "font-family: 'Vegur'; color: #000; text-align: left;"></h3>
-              </div>
-              <div class="modal-body">
-                  <!-- Modal Registration form - START -->
-              <div class="container" style= "font-family: 'Vegur'; color: #000;">
-              <div class="row">
-                  <form role="form">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
 
-                          <!--biz card content-->
-                          <img style="float: right; width: 150px; border-radius: 1px; border: solid;" id="profileImg">
-                          <!--<div id="profileFullName"></div>-->
-                          <div>Objective Statement</div>
-                          <label id="profileObj"></label>
-                          <div>Skills</div>
-                          <label id="profileSkills"></label>
-                          <div>Education</div>
-                          <label id="profileEducation"></label>
-                          <div>Email</div>
-                          <label id="profileEmail"></label>
-                          <div>Contact Number</div>
-                          <label id="profileContact"></label>
-                             <br>
-                          <div class="modal-footer">
-                            <button class="btn btn-danger" id="profileResume" style="float: right;">Click for Resume</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
+        <!-- Modal Login-->
+                <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Login</h3>
+                      </div>
+                      <div class="modal-body">
+                          <!-- Modal Registration form - START -->
+                      <div class="container" style= "font-family: 'Vegur'; color: #000;">
+                      <div class="row">
+                          <form role="form">
+                              <div class="col-lg-6 col-md-6 col-sm-6">
+                                  <div class="form-group">
+                                      <label for="loginUsername">Email Address</label>
+                                      <div class="input-group">
+                                          <input style="width:100%" type="email" class="form-control" name="InputName" id="loginUsername" placeholder="Enter Your Email Address" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="loginPassword">Password</label>
+                                      <div class="input-group">
+                                          <input type="password" class="form-control" id="loginPassword" name="InputPassword" placeholder="Enter Your Password" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
+                                  <input type="submit" name="submit" id="submitLogin" value="Login" class="btn btn-danger">
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  <br>
+                  </div>
+                  <!-- Modal Login form - END -->
                           </div>
                       </div>
-                  </form>
-              </div>
-          <br>
-          </div>
-          <!-- Modal Login form - END -->
+                    </div>
                   </div>
-              </div>
-            </div>
-          </div>
 
-<!-- Modal Edit Profile-->
-        <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Edit Your Profile Here</h3>
-              </div>
-              <div class="modal-body">
-                  <!-- Modal Registration form - START -->
-              <div class="container" style= "font-family: 'Vegur'; color: #000;">
-              <div class="row">
-                  <form role="form">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                          <div class="form-group">
-                              <label for="EditFName">Full Name</label>
-                              <div class="input-group">
-                                  <input style="width:100%" type="text" class="form-control" name="editFullName" id="editFullName">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+        <!-- Modal Biz Card-->
+                <div class="modal fade" id="bizcard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h3 class="modal-title" id="profileFullName" style= "font-family: 'Vegur'; color: #000; text-align: left;"></h3>
+                      </div>
+                      <div class="modal-body">
+                          <!-- Modal Registration form - START -->
+                      <div class="container" style= "font-family: 'Vegur'; color: #000;">
+                      <div class="row">
+                          <form role="form">
+                              <div class="col-lg-6 col-md-6 col-sm-6">
+
+                                  <!--biz card content-->
+                                  <img style="float: right; width: 150px; border-radius: 1px; border: solid;" id="profileImg">
+                                  <!--<div id="profileFullName"></div>-->
+                                  <div>Objective Statement</div>
+                                  <label id="profileObj"></label>
+                                  <div>Skills</div>
+                                  <label id="profileSkills"></label>
+                                  <div>Education</div>
+                                  <label id="profileEducation"></label>
+                                  <div>Email</div>
+                                  <label id="profileEmail"></label>
+                                  <div>Contact Number</div>
+                                  <label id="profileContact"></label>
+                                     <br>
+                                  <div class="modal-footer">
+                                    <button class="btn btn-danger" id="profileResume" style="float: right;">Click for Resume</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
+                                  </div>
                               </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="EditPassword">Username</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" id="editUsername" name="editUsername">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="EditPassword">Password</label>
-                              <div class="input-group">
-                                  <input type="password" class="form-control" id="editPassword" name="editPassword" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="EditEmail">Email Address</label>
-                              <div class="input-group">
-                                  <input type="email" class="form-control" name="editName" id="editEmail">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="EditAge">Age</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditAge" id="editAge">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="EditGender">Gender</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditGender" id="editGender">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                             <div class="form-group">
-                              <label for="EditNationality">Nationality</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditNationality" id="editNationality">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                              <div class="form-group">
-                              <label for="EditSchool">School/Organisation</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditName" id="editSchool">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="EditContact">Contact Number</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditContact" id="editContact">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="EditEducation">Degree/Education</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditEducation" id="editEducation">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="EditSkills">Skills</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditSkills" id="editSkills">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="EditObj">Objective Statement</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditObj" id="editObj">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-                          <label>Upload a new Business Card Photo</label>
-                          <input type="file" id="editProfilePhotoFileUpload">
-                          <br>
-                          <label>Upload a new Resume</label>
-                          <input type="file" id="editProfileResumeUpload">
-
-                          <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm3">Close</button>
-                          <input type="submit" name="submit" id="submitEdit" value="Edit Profile" class="btn btn-danger">
+                          </form>
+                      </div>
+                  <br>
+                  </div>
+                  <!-- Modal Login form - END -->
                           </div>
                       </div>
-                  </form>
-              </div>
-          <br>
-          </div>
-          <!-- Modal Registration form - END -->
+                    </div>
                   </div>
-              </div>
-            </div>
-          </div>
 
+        <!-- Modal Edit Profile-->
+                <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Edit Your Profile Here</h3>
+                      </div>
+                      <div class="modal-body">
+                          <!-- Modal Registration form - START -->
+                      <div class="container" style= "font-family: 'Vegur'; color: #000;">
+                      <div class="row">
+                          <form role="form">
+                              <div class="col-lg-6 col-md-6 col-sm-6">
+                                  <div class="form-group">
+                                      <label for="EditFName">Full Name</label>
+                                      <div class="input-group">
+                                          <input style="width:100%" type="text" class="form-control" name="editFullName" id="editFullName">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="EditPassword">Email Address (Username)</label>
+                                      <div class="input-group">
+                                          <input type="email" class="form-control" id="editUsername" name="editUsername">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="EditPassword">Password</label>
+                                      <div class="input-group">
+                                          <input type="password" class="form-control" id="editPassword" name="editPassword" required>
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                   <div class="form-group">
+                                      <label for="EditAge">Age</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="EditAge" id="editAge">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                    <div class="form-group">
+                                      <label for="EditGender">Gender</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="EditGender" id="editGender">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                     <div class="form-group">
+                                      <label for="EditNationality">Nationality</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="EditNationality" id="editNationality">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="EditContact">Contact Number</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="EditContact" id="editContact">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                   <div class="form-group">
+                                      <label for="EditEducation">Highest Qualification</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="EditEducation" id="editEducation">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                    <div class="form-group">
+                                      <label for="EditSkills">Skills</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="EditSkills" id="editSkills">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+
+                                    <div class="form-group">
+                                      <label for="EditObj">Objective Statement</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" name="EditObj" id="editObj">
+                                          <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                      </div>
+                                  </div>
+                                  <label>Upload a new Business Card Photo</label>
+                                  <input type="file" id="editProfilePhotoFileUpload">
+                                  <br>
+                                  <label>Upload a new Resume</label>
+                                  <input type="file" id="editProfileResumeUpload">
+
+                                      <p>By signing up you agree to the Terms & Conditions stated in our <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
+
+                                  <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm3">Close</button>
+                                  <input type="submit" name="submit" id="submitEdit" value="Edit Profile" class="btn btn-danger">
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  <br>
+                  </div>
+                  <!-- Modal Registration form - END -->
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  
 <!-- Modal SmsDome-->
         <div class="modal fade" id="smsdome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">

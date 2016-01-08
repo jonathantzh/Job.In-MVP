@@ -16,7 +16,7 @@ document.getElementById("searchsubmit").addEventListener("click" , function() {
       console.log('Failed to create new object, with error code: ' + error.message);
     }
   });
-})
+});
 
   // searchQuery.fetch({
   //   success: function(searchQuery) {
