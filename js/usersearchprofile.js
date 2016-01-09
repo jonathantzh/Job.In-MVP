@@ -125,6 +125,7 @@ function signUp() {
     var user = new Parse.User();
     user.set("fullname", fullname);
     user.set("username", username);
+    user.set("email", username);
     user.set("password", password);
     user.set("age", age);
     user.set("gender", gender);
