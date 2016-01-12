@@ -106,7 +106,6 @@ document.getElementById("logOut").addEventListener("click", function(){
     Parse.User.logOut();
     alert("Success!");
     location.reload();
-    // Hooray! Let them use the app now.
 });
 
 //function definitions
