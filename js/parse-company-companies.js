@@ -19,39 +19,39 @@ if (currentUser) {
     $('#profileContact').html(currentUser.get("contact"));
     $('#profileEmail').html(currentUser.get("username"));
 
-     //attempted popover
-    $('.applyvideo').popover({
-    html: true,
-    content: function() {
-        return 'Click to Flink Your Business Card!';
-    }
-    });
-
-    $('#smsdomejob1').popover({
-    html: true,
-    content: function() {
-        return "Develop SmsDome's groundbreaking new technologies in communications technology.";
-    }
-    });
-
-    $('#smsdomejob2').popover({
-    html: true,
-    content: function() {
-        return "Oversee SmsDome's managerial accounts and logistical solutions.";
-    }
-    });
-
-    $('#smsdomejob3').popover({
-    html: true,
-    content: function() {
-        return "Lead SmsDome towards greater brand awareness and audience reach.";
-    }
-    });
-
-    //submit biz card
-    document.getElementById("applyvideoid").addEventListener("click", function(){
-        submitBizCard();
-    });
+    //  //attempted popover for biz card submissions
+    // $('.applyvideo').popover({
+    // html: true,
+    // content: function() {
+    //     return 'Click to Flink Your Business Card!';
+    // }
+    // });
+    //
+    // $('#smsdomejob1').popover({
+    // html: true,
+    // content: function() {
+    //     return "Develop SmsDome's groundbreaking new technologies in communications technology.";
+    // }
+    // });
+    //
+    // $('#smsdomejob2').popover({
+    // html: true,
+    // content: function() {
+    //     return "Oversee SmsDome's managerial accounts and logistical solutions.";
+    // }
+    // });
+    //
+    // $('#smsdomejob3').popover({
+    // html: true,
+    // content: function() {
+    //     return "Lead SmsDome towards greater brand awareness and audience reach.";
+    // }
+    // });
+    //
+    // //submit biz card
+    // document.getElementById("applyvideoid").addEventListener("click", function(){
+    //     submitBizCard();
+    // });
 
     //editprofile. password not possible
     $('#editFullName').attr("value", currentUser.get("fullname"));
