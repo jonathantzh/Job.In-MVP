@@ -4,9 +4,13 @@ var currentUser = Parse.User.current();
 if (currentUser) {}
 
 else {
-  $(document).ready(setTimeout(function() {
-    $('#newsletter').modal('show')}, 5000)
-  );
+  $(document).ready(function(){
+    $(window).scroll(function() {
+    if($(document).scrollTop()>$(document).height()-$(window).height()-100) {
+      $('#newsletter').modal('show');
+    }
+  });
+});
 }
 
 var NewsletterSubs = Parse.Object.extend("NewsletterSubs");

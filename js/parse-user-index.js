@@ -41,13 +41,15 @@ if (currentUser) {
     $('#editSkills').attr("value", currentUser.get("skills"));
 
     $('#logIn').hide();
-    $('#signUp').hide();
+    $('#signUp1').hide();
+    $('#signUp2').hide();
     $('#companylink').hide();
 } else {
     // show the signup or login page
     $('#logOut').hide();
     $('#viewBizCard').hide();
     $('#editProfile').hide();
+    $('#browseheader').hide();
 }
 
 document.getElementById("submitForm").addEventListener("click", function(){

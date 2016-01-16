@@ -1,3 +1,4 @@
+$(document).ready(function(){
 Parse.initialize("jYY9sPa7vefy9J3A1YxwVLfUTMRBVzIc9SefECZ7", "rrGAz3YXeI3Pijz2CmBum2gDIWpzUQDbsjpwvfSN");
 
 var currentUser = Parse.User.current();
@@ -257,3 +258,4 @@ function submitBizCard() {
 });
 
 }
+});
