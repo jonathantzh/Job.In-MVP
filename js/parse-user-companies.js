@@ -55,17 +55,6 @@ if (currentUser) {
     //     submitBizCard();
     // });
 
-    //editprofile. password not possible
-    $('#editFullName').attr("value", currentUser.get("fullname"));
-    $('#editUsername').attr("value", currentUser.get("username"));
-    $('#editAge').attr("value", currentUser.get("age"));
-    $('#editGender').attr("value", currentUser.get("gender"));
-    $('#editNationality').attr("value", currentUser.get("nationality"));
-    $('#editObj').attr("value", currentUser.get("objective"));
-    $('#editEducation').attr("value", currentUser.get("education"));
-    $('#editContact').attr("value", currentUser.get("contact"));
-    $('#editSkills').attr("value", currentUser.get("skills"));
-
     $('#logIn').hide();
     $('#signUp').hide();
     $('#companylink').hide();
@@ -74,7 +63,29 @@ if (currentUser) {
     $('#logOut').hide();
     $('#viewBizCard').hide();
     $('#editProfile').hide();
+    $('#editProfile').hide();
 }
+
+document.getElementById("forgotButton").addEventListener("click", function(){
+        $("#closeLogin").click();
+    });
+
+document.getElementById("submitForgot").addEventListener("click", function(){
+    var forgotEmail = document.getElementById("forgotEmail").value;
+
+    Parse.User.requestPasswordReset(forgotEmail, {
+    success: function() {
+      alert("An password reset email has been sent to the entered email.");
+      $("#forgotClose").click();
+      document.getElementById("forgotEmail").value='';
+    // Password reset request was sent successfully
+    },
+    error: function(error) {
+      // Show the error message somewhere
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
+});
 
 document.getElementById("submitForm").addEventListener("click", function(){
     if (document.getElementById("inputUsername").value && document.getElementById("inputPassword").value) {
@@ -91,15 +102,6 @@ document.getElementById("submitLogin").addEventListener("click", function(){
         $("#closeForm2").click();
         document.getElementById("loginUsername").value = '';
         document.getElementById("loginPassword").value = '';
-    }
-  });
-
-document.getElementById("submitEdit").addEventListener("click", function(){
-    if (document.getElementById("editUsername").value && document.getElementById("editPassword").value) {
-        editProfile();
-        $("#closeForm3").click();
-        document.getElementById("editUsername").value = '';
-        document.getElementById("editPassword").value = '';
     }
   });
 
@@ -155,7 +157,7 @@ function signUp() {
 
     user.signUp(null, {
     success: function(user) {
-    alert("Success!");
+    alert("Welcome to Airflink!");
     // Hooray! Let them use the app now.
     location.reload();
   },
@@ -178,65 +180,9 @@ function logIn() {
       },
       error: function(user, error) {
         // The login failed. Check error to see why.
-        alert("Error: " + error.code + " " + error.message);
+        alert("Error: Username and/or Password do not match! Try again.");
       }
     });
-}
-
-function editProfile() {
-    var fullname = document.getElementById('editFullName').value;
-    var username = document.getElementById('editUsername').value;
-    var password = document.getElementById('editPassword').value;
-    var age = document.getElementById('editAge').value;
-    var gender = document.getElementById('editGender').value;
-    var nationality = document.getElementById('editNationality').value;
-    var contact = document.getElementById('editContact').value;
-    var education = document.getElementById('editEducation').value;
-    var objective = document.getElementById('editObj').value;
-    var skills = document.getElementById('editSkills').value;
-
-    var fileUploadControl = $("#editProfilePhotoFileUpload")[0];
-    if (fileUploadControl.files.length > 0) {
-    var picfile = fileUploadControl.files[0];
-    var picname = "editprofilepic.jpg";
-    var profilePhoto = new Parse.File(picname, picfile);
-    }
-
-    var fileUploadControl = $("#editProfileResumeUpload")[0];
-    if (fileUploadControl.files.length > 0) {
-    var resfile = fileUploadControl.files[0];
-    var resname = "editresume.pdf";
-    var profileResume = new Parse.File(resname, resfile);
-    }
-
-    var User = Parse.Object.extend("_User");
-    var editUser = Parse.User.current();
-
-    editUser.set("fullname", fullname);
-    editUser.set("username", username);
-    editUser.set("password", password);
-    editUser.set("age", age);
-    editUser.set("gender", gender);
-    editUser.set("nationality", nationality);
-    editUser.set("contact", contact);
-    editUser.set("education", education);
-    editUser.set("objective", objective);
-    editUser.set("skills", skills);
-    editUser.set("profilePic", profilePhoto);
-    editUser.set("profileResume", profileResume);
-
-    editUser.save(null, {
-    success: function(editUser) {
-        editUser.save();
-        alert("Success! Log in again to view updated information.");
-        Parse.User.logOut();
-        location.reload();
-  },
-    error: function(user, error) {
-    // Show the error message somewhere and let the user try again.
-    alert("Error: " + error.code + " " + error.message);
-  }
-});
 }
 
 function submitBizCard() {

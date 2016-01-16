@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Connecting Experiences | Airflink"/>
+    <meta property="og:image" content="archive/airflinklogo.png"/>
+    <meta property="og:description" content="A video paints a thousand pictures"/>
+    <meta property="og:url" content="airflink.com" />
+
+        <style>
+
+            @font-face {
+                font-family: 'Vegur';
+                src: url('fonts/vegur-webfont.eot');
+                src: url('fonts/vegur-webfont.eot?#iefix') format('embedded-opentype'),
+                     url('fonts/vegur-webfont.woff2') format('woff2'),
+                     url('fonts/vegur-webfont.woff') format('woff'),
+                     url('fonts/vegur-webfont.ttf') format('truetype'),
+                     url('fonts/vegur-webfont.svg#vegurextralight') format('svg');
+                font-weight: normal;
+                font-style: normal;
+
+            }
+        </style>
+
+    <title>Connecting Experiences | Airflink</title>
+
+    <link rel="shortcut icon" href="img/faviconred.ico"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="css/searchbar.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('img/edit.jpg');">
+<div class="container">
+    <div class="row" style="text-align: center;">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+                <div class="site-heading">
+                    <h1 style= "font-weight:300; font-size: 100px;text-align:center;">edit</h1>
+                    <hr class="small">
+                    <span class="subheading">change your account details here</span>
+                    <br><br>
+</header>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a id="homebutton" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="companies.html">Companies</a>
+                    </li>
+                    <li>
+                        <a href="usersearch.html">Search</a>
+                    </li>
+                    <li>
+                        <a href="https://airflink.wordpress.com/" target="_blank">Resources</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                      <li>
+                        <!--//attempted popover-->
+                        <!--<button id="popoverData" class="btn" href="#" rel="popover" data-placement="bottom"
+                           data-original-title="My Biz card" data-trigger="hover">View Your Biz Card <img id="profileImg"></img></button>-->
+                        <a href="" data-toggle="modal" data-target="#bizcard" id="viewBizCard">My Card</a>
+                      </li>
+                      <li>
+                        <a href="" data-toggle="modal" data-target="#login" id="logIn">Log<span style="color:#ff4848">in</span></a>
+                      </li>
+                      <li>
+                        <a href="usereditprofile.html" data-toggle="modal" data-target="#editprofile" id="editProfile">Edit Profile</a>
+                      </li>
+                      <li>
+                        <a href="" id="logOut">Log<span style="color:#ff4848";>out</span></a>
+                      </li>
+                        <!-- <button type="button" id="companylink" class="btn btn-danger btn-sm" style="text-align:center; font-size: 12px;">
+                            <a href="companyindex.html">Are you a Company? Click Here!</a>
+                        </button> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<!-- Modal Registration form - START -->
+<div class="container" style= "font-family: 'Vegur'; color: #000;">
+  <div class="row">
+
+    <form role="form">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+            <div class="form-group">
+              <h1>Edit Your Profile</h1>
+              <br>
+                <label for="EditFName">Full Name</label>
+                    <input style="width:100%" type="text" class="form-control inputdefault" name="editFullName" id="editFullName">
+            </div>
+
+            <div class="form-group">
+                <label for="EditPassword">Email Address (Username)</label>
+                    <input type="email" class="form-control inputdefault" id="editUsername" name="editUsername">
+            </div>
+
+             <div class="form-group">
+                <label for="EditAge">Age</label>
+                    <input type="text" class="form-control inputdefault" name="EditAge" id="editAge">
+            </div>
+
+            <div class="form-group">
+                <label for="EditGender">Gender</label>
+                    <input type="text" class="form-control inputdefault" name="EditGender" id="editGender">
+            </div>
+
+               <div class="form-group">
+                <label for="EditNationality">Nationality</label>
+                    <input type="text" class="form-control inputdefault" name="EditNationality" id="editNationality">
+            </div>
+
+            <div class="form-group">
+                <label for="EditContact">Contact Number</label>
+                    <input type="text" class="form-control inputdefault" name="EditContact" id="editContact">
+            </div>
+
+             <div class="form-group">
+                <label for="EditEducation">Highest Qualification</label>
+                    <input type="text" class="form-control inputdefault" name="EditEducation" id="editEducation">
+            </div>
+
+              <div class="form-group">
+                <label for="EditSkills">Skills</label>
+                    <input type="text" class="form-control inputdefault" name="EditSkills" id="editSkills">
+            </div>
+
+              <div class="form-group">
+                <label for="EditObj">Objective Statement</label>
+                    <input type="text" class="form-control inputdefault" name="EditObj" id="editObj">
+            </div>
+            <label>Upload a new Business Card Photo</label>
+            <input type="file" id="editProfilePhotoFileUpload">
+            <br>
+            <label>Upload a new Resume</label>
+            <input type="file" id="editProfileResumeUpload">
+
+            <br>
+            <div class="row" style="text-align:center;">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+                <input type="submit" name="submit" id="submitEdit" value="Save Changes" class="btn btn-default">
+              </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <h1>Change Your Password</h1>
+                <p>Enter new password:</p>
+                    <input type="password" class="form-control inputdefault" id="editPassword" name="editPassword" required>
+                <p>Confirm new password:</p>
+                    <input type="password" class="form-control inputdefault" id="editCPassword" name="editCPassword" required>
+            </div>
+
+            <br>
+            <div class="row" style="text-align:center;">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+                <input type="submit" name="submit" id="submitEditPassword" value="Save New Password" class="btn btn-default">
+              </div>
+            </div>
+            <br>
+
+        </div>
+    </form>
+  </div>
+<br>
+</div>
+
+
+
+
+  <div class="container" style= "text-align: center;">
+      <!-- Footer -->
+    <div class="row">
+        <div class="col-lg-12">
+        <p style= "font-family: 'Vegur';text-align: center; font-weight: bolder;">Copyright &copy; <span style="color:#ff4848; font-weight: 400;">
+        air</span>flink 2015<br><br><a href="https://www.facebook.com/airflink?ref=hl" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
+        <a href="https://airflink.wordpress.com/" target="_blank"><i class="fa fa-wordpress fa-fw"></i></a>
+        <a href="mailto:admin@airflink.com"><i class="fa fa-envelope fa-fw"></i></a>
+        <a href="about.html"><i class="fa fa-user fa-fw"></i></a></p>
+        </div>
+    </div>
+  </div>
+</body>
+
+<!-- Modal Biz Card-->
+        <div class="modal fade" id="bizcard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="profileFullName" style= "font-family: 'Vegur'; color: #000; text-align: left;"></h3>
+              </div>
+              <div class="modal-body">
+                  <!-- Modal Registration form - START -->
+              <div class="container" style= "font-family: 'Vegur'; color: #000;">
+              <div class="row">
+                  <form role="form">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+
+                          <!--biz card content-->
+                          <img style="float: right; width: 150px; border-radius: 1px; border: solid;" id="profileImg">
+                          <!--<div id="profileFullName"></div>-->
+                          <div>Objective Statement</div>
+                          <label id="profileObj"></label>
+                          <div>Skills</div>
+                          <label id="profileSkills"></label>
+                          <div>Education</div>
+                          <label id="profileEducation"></label>
+                          <div>Email</div>
+                          <label id="profileEmail"></label>
+                          <div>Contact Number</div>
+                          <label id="profileContact"></label>
+                             <br>
+                          <div class="modal-footer">
+                            <button class="btn btn-danger" id="profileResume" style="float: right;">Click for Resume</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          <br>
+          </div>
+          <!-- Modal Login form - END -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- jQuery -->
+          <script src="js/jquery.min.js"></script>
+
+          <!-- Bootstrap Core JavaScript -->
+          <script src="js/bootstrap.min.js"></script>
+
+          <!-- Custom Theme JavaScript -->
+          <script src="js/clean-blog.min.js"></script>
+
+          <!-- Parse Server JavaScript -->
+          <script src="js/usereditprofile.js"></script>
+</html>

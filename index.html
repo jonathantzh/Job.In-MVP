@@ -98,7 +98,7 @@
                         <a href="" data-toggle="modal" data-target="#login" id="logIn">Log<span style="color:#ff4848">in</span></a>
                       </li>
                       <li>
-                        <a href="" data-toggle="modal" data-target="#editprofile" id="editProfile">Edit Profile</a>
+                        <a href="usereditprofile.html" id="editProfile">Edit Profile</a>
                       </li>
                       <li>
                         <a href="" id="logOut">Log<span style="color:#ff4848";>out</span></a>
@@ -301,20 +301,23 @@
                             </div>
 
                            <div class="form-group">
-                              <label for="InputAge">Age</label>
+                              <label for="InputAge">Date of Birth</label>
                               <div class="input-group">
-                                  <input type="text" class="form-control" name="InputAge" id="inputAge" placeholder="Enter Your Age" required>
+                                  <input type="text" class="form-control" name="InputAge" id="inputAge" placeholder="DD/MM/YYYY" required>
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                               </div>
                           </div>
 
                             <div class="form-group">
-                              <label for="InputGender">Gender</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="InputGender" id="inputGender" placeholder="Enter Your Gender" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
+                              <label for="inputGender">Gender</label>
+                              <select id="inputGender">
+                                  <option>Select one</option>
+                                  <option value="male">Male</option>
+                                  <option value="female">Female</option>
+                                  <option value="other">Other</option>
+                                  <option value="unstated">Prefer not to state</option>
+                              </select>
+                            </div>
 
                              <div class="form-group">
                               <label for="InputNationality">Nationality</label>
@@ -384,7 +387,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeLogin"><span aria-hidden="true">&times;</span></button>
                   <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Login</h3>
               </div>
               <div class="modal-body">
@@ -409,6 +412,8 @@
                               </div>
                           </div>
 
+                          <a href="" data-toggle="modal" data-target="#forgot" id="forgotButton" style="font-size:14px;">Forgot your password?</a>
+
                           <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm2">Close</button>
                           <input type="submit" name="submit" id="submitLogin" value="Login" class="btn btn-danger">
@@ -420,6 +425,27 @@
           </div>
           <!-- Modal Login form - END -->
                   </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModal">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" id="forgotClose" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Reset password</h3>
+                </div>
+                <div class="modal-body" style="font-family:'Vegur';">
+                  <label>Enter your email address to reset your password:</label>
+                  <div class="form-group">
+                      <input type="email" class="form-control inputdefault" name="InputName" id="forgotEmail" placeholder="Enter Your Email Address" required>
+                      <br>
+                      <div style="text-align:center;">
+                        <input type="submit" name="submit" id="submitForgot" value="Reset Password" class="btn btn-danger">
+                      </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -463,122 +489,6 @@
           <br>
           </div>
           <!-- Modal Login form - END -->
-                  </div>
-              </div>
-            </div>
-          </div>
-
-<!-- Modal Edit Profile-->
-        <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="myModalLabel" style= "font-family: 'Vegur'; color: #000; text-align: left;">Edit Your Profile Here</h3>
-              </div>
-              <div class="modal-body">
-                  <!-- Modal Registration form - START -->
-              <div class="container" style= "font-family: 'Vegur'; color: #000;">
-              <div class="row">
-                  <form role="form">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                          <div class="form-group">
-                              <label for="EditFName">Full Name</label>
-                              <div class="input-group">
-                                  <input style="width:100%" type="text" class="form-control" name="editFullName" id="editFullName">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="EditPassword">Email Address (Username)</label>
-                              <div class="input-group">
-                                  <input type="email" class="form-control" id="editUsername" name="editUsername">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="EditPassword">Password</label>
-                              <div class="input-group">
-                                  <input type="password" class="form-control" id="editPassword" name="editPassword" required>
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="EditAge">Age</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditAge" id="editAge">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="EditGender">Gender</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditGender" id="editGender">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                             <div class="form-group">
-                              <label for="EditNationality">Nationality</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditNationality" id="editNationality">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="EditContact">Contact Number</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditContact" id="editContact">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                           <div class="form-group">
-                              <label for="EditEducation">Highest Qualification</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditEducation" id="editEducation">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="EditSkills">Skills</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditSkills" id="editSkills">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-
-                            <div class="form-group">
-                              <label for="EditObj">Objective Statement</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" name="EditObj" id="editObj">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                              </div>
-                          </div>
-                          <label>Upload a new Business Card Photo</label>
-                          <input type="file" id="editProfilePhotoFileUpload">
-                          <br>
-                          <label>Upload a new Resume</label>
-                          <input type="file" id="editProfileResumeUpload">
-
-                              <p>By signing up you agree to the Terms & Conditions stated in our <a href="docs/pdpa.pdf" target="_blank">Personal Data Protection Act.</a></p>
-
-                          <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" id="closeForm3">Close</button>
-                          <input type="submit" name="submit" id="submitEdit" value="Edit Profile" class="btn btn-danger">
-                          </div>
-                      </div>
-                  </form>
-              </div>
-          <br>
-          </div>
-          <!-- Modal Registration form - END -->
                   </div>
               </div>
             </div>
@@ -646,6 +556,7 @@
 
     <!-- Parse Newsletter JavaScript -->
     <script src="js/newsletter.js"></script>
+
 
 </body>
 
