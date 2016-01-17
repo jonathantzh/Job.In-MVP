@@ -5810,6 +5810,7 @@ button.close {
 .modal-body {
   position: relative;
   padding: 15px;
+  word-wrap: break-word;
 }
 .modal-footer {
   padding: 15px;

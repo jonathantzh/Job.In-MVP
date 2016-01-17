@@ -59,7 +59,15 @@ if (currentUser) {
     $('#logOut').hide();
     $('#viewBizCard').hide();
     $('#editProfile').hide();
-    $('#editProfile').hide();
+    $('#applygoodrich').hide();
+    $('#applyck').hide();
+    $('#applysmsdome').hide();
+    $('#applyvisenze').hide();
+    $('#applycadit').hide();
+    $('#applyclariti').hide();
+    $('#applycordlife').hide();
+    $('#applyecovis').hide();
+    $('#applyetonhouse').hide();
 }
 
 document.getElementById("forgotButton").addEventListener("click", function(){

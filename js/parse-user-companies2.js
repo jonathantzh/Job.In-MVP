@@ -60,6 +60,14 @@ if (currentUser) {
     $('#viewBizCard').hide();
     $('#editProfile').hide();
     $('#editProfile').hide();
+    $('#applyinfinium').hide();
+    $('#applypacifictec').hide();
+    $('#applypds').hide();
+    $('#applyplaynation').hide();
+    $('#applyrigel').hide();
+    $('#applysunseap').hide();
+    $('#applyvault').hide();
+    $('#applywebnatics').hide();
 }
 
 document.getElementById("forgotButton").addEventListener("click", function(){
