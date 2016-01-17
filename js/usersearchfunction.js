@@ -28,7 +28,7 @@ switch (result1.ref) {
 
   case 1:
   result1title = "SmsDome";
-  result1video = '<iframe style="border-top: solid; border-top-color: #ff4848;" width="400" height="250" src="https://www.youtube.com/embed/U7KWRJQ9yuQ" frameborder="0" allowfullscreen></iframe><br>';
+  result1video = '<iframe style="border-top: solid; border-top-color: #ff4848;" width="400" height="250" src="https://www.youtube.com/embed/U7KWRJQ9yuQ" frameborder="0" allowfullscreen></iframe>';
   result1body = "SmsDome is a mobile marketing solutions company that provides the platform and tools to create and execute successful mobile marketing initiatives.";
   break;
 
