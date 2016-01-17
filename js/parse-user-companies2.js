@@ -201,49 +201,43 @@ function submitBizCard(text) {
 });
 }
 
-//submit smsdome biz card
-document.getElementById("applysmsdome").addEventListener("click", function(){
-    submitBizCard("smsdome");
-});
+  //submit infinium biz card
+  document.getElementById("applyinfinium").addEventListener("click", function(){
+      submitBizCard("infinium");
+  });
 
-//submit goodrich biz card
-document.getElementById("applygoodrich").addEventListener("click", function(){
-    submitBizCard("goodrich");
-});
+  //submit pacifictec biz card
+  document.getElementById("applypacifictec").addEventListener("click", function(){
+      submitBizCard("pacifictec");
+  });
 
-//submit CK biz card
-document.getElementById("applyck").addEventListener("click", function(){
-    submitBizCard("ck");
-});
+  //submit pds biz card
+  document.getElementById("applypds").addEventListener("click", function(){
+      submitBizCard("pds");
+  });
 
-//submit visenze biz card
-document.getElementById("applyvisenze").addEventListener("click", function(){
-    submitBizCard("visenze");
-});
+  //submit playnation biz card
+  document.getElementById("applyplaynation").addEventListener("click", function(){
+      submitBizCard("playnation");
+  });
 
-//submit cadit biz card
-document.getElementById("applycadit").addEventListener("click", function(){
-    submitBizCard("cadit");
-});
+  //submit rigel biz card
+  document.getElementById("applyrigel").addEventListener("click", function(){
+      submitBizCard("rigel");
+  });
 
-//submit clariti biz card
-document.getElementById("applyclariti").addEventListener("click", function(){
-    submitBizCard("clariti");
-});
+  //submit sunseap biz card
+  document.getElementById("applysunseap").addEventListener("click", function(){
+      submitBizCard("sunseap");
+  });
 
-//submit cordlife biz card
-document.getElementById("applycordlife").addEventListener("click", function(){
-    submitBizCard("cordlife");
-});
+  //submit vault biz card
+  document.getElementById("applyvault").addEventListener("click", function(){
+      submitBizCard("vault");
+  });
 
-//submit ecovis biz card
-document.getElementById("applyecovis").addEventListener("click", function(){
-    submitBizCard("ecovis");
-});
-
-//submit etonhouse biz card
-document.getElementById("applyetonhouse").addEventListener("click", function(){
-    submitBizCard("etonhouse");
-});
-
+  //submit webnatics biz card
+  document.getElementById("applywebnatics").addEventListener("click", function(){
+      submitBizCard("webnatics");
+  });
 });
