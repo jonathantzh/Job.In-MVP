@@ -62,7 +62,7 @@ if (currentUser) {
     $('#applygoodrich').hide();
     $('#applyck').hide();
     $('#applysmsdome').hide();
-    $('#applyvisenze').hide();
+    $('#applysunseap').hide();
     $('#applycadit').hide();
     $('#applyclariti').hide();
     $('#applycordlife').hide();
@@ -224,9 +224,9 @@ document.getElementById("applyck").addEventListener("click", function(){
     submitBizCard("ck");
 });
 
-//submit visenze biz card
-document.getElementById("applyvisenze").addEventListener("click", function(){
-    submitBizCard("visenze");
+//submit sunseap biz card
+document.getElementById("applysunseap").addEventListener("click", function(){
+    submitBizCard("sunseap");
 });
 
 //submit cadit biz card

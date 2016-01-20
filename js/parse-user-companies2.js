@@ -65,7 +65,7 @@ if (currentUser) {
     $('#applypds').hide();
     $('#applyplaynation').hide();
     $('#applyrigel').hide();
-    $('#applysunseap').hide();
+    $('#applyvisenze').hide();
     $('#applyvault').hide();
     $('#applywebnatics').hide();
 }
@@ -234,9 +234,9 @@ function submitBizCard(text) {
       submitBizCard("rigel");
   });
 
-  //submit sunseap biz card
-  document.getElementById("applysunseap").addEventListener("click", function(){
-      submitBizCard("sunseap");
+  //submit visenze biz card
+  document.getElementById("applyvisenze").addEventListener("click", function(){
+      submitBizCard("visenze");
   });
 
   //submit vault biz card
