@@ -89,13 +89,22 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                       <li>
+                          <a href="https://www.facebook.com/airflink?ref=hl" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
+                      </li>
+                      <li>
+                          <a href="mailto:admin@airflink.com"><i class="fa fa-envelope fa-fw"></i></a>
+                      </li>
+                      <li>
+                          <a href="about.html"><i class="fa fa-user fa-fw"></i></a>
+                      </li>
+                      <li>
                         <!--//attempted popover-->
                         <!--<button id="popoverData" class="btn" href="#" rel="popover" data-placement="bottom"
                            data-original-title="My Biz card" data-trigger="hover">View Your Biz Card <img id="profileImg"></img></button>-->
                         <a href="" data-toggle="modal" data-target="#bizcard" id="viewBizCard">My Business Card</a>
                       </li>
                       <li>
-                        <a href="" data-toggle="modal" data-target="#login" id="logIn">Log<span style="color:#ff4848">in</span></a>
+                        <!-- <a href="" data-toggle="modal" data-target="#login" id="logIn">Log<span style="color:#ff4848">in</span></a> -->
                       </li>
                       <li>
                         <a href="usereditprofile.html" id="editProfile">Edit Profile</a>
@@ -129,8 +138,17 @@
 
 <!--searchbar end-->
                         <div class="row">
-                            <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community"
-                                   class="btn btn-danger btn-lg" id="signUp1">
+                            <!-- <input type="button" data-toggle="modal" data-target="#registration" style="text-align:center;" value="Join the AirFlink Community"
+                                   class="btn btn-danger btn-lg" id="signUp1"> -->
+
+                                   <div class="input-group" id="adv-search" style="font-family: Vegur;">
+                                       <input type="email" class="form-control" placeholder="Be the first to view our videos!" id="newsletteremail" required>
+                                       <div class="input-group-btn">
+                                           <div class="btn-group" role="group">
+                                               <button type="button" id="newslettersubmit" class="searchbtn btn-danger"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                                           </div>
+                                       </div>
+                                   </div>
                         </div>
                             <br>
                             <span class="subheading" style="font-size:18px">Stay Up to Date with Our Latest Videos!</span>
@@ -488,12 +506,12 @@
           </div>
 
 <!-- Modal Newsletter Start-->
-                  <div class="modal fade" id="newsletter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <!-- <div class="modal fade" id="newsletter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                          <div class="modal-body" style="background-image: url('img/newsletterbg.jpg');">
+                          <div class="modal-body" style="background-image: url('img/newsletterbg.jpg');"> -->
                             <!-- Modal Registration form - START -->
-                              <div class="container" style= "font-family: 'Vegur'; font-weight: bolder;">
+                              <!-- <div class="container" style= "font-family: 'Vegur'; font-weight: bolder;">
                                 <div class="row">
                                   <form role="form">
                                     <div class="col-lg-6 col-md-7 col-sm-9">
@@ -520,10 +538,10 @@
                                               <div style="text-align:center;">
                                                 <input type="button" id="newslettersubmit" class="btn-danger btn-sm" style="font-size: 16px;" value="Yes Please!">
                                               </div>
-                                            </div>
+                                            </div> -->
 
                                         <!-- <input type="submit" name="submit" id="submitLogin" value="Sign Up" class="btn btn-danger"> -->
-                                      </div>
+                                      <!-- </div>
                                     </div>
                                   </form>
                                 </div>
@@ -532,7 +550,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
 <!-- Modal Newsletter End -->
 
     <!-- jQuery -->
@@ -548,7 +566,7 @@
     <script src="js/parse-user-index.js"></script>
 
     <!-- Parse Newsletter JavaScript -->
-    <!-- <script src="js/newsletter.js"></script> -->
+    <script src="js/newsletter.js"></script>
 
 
 </body>
